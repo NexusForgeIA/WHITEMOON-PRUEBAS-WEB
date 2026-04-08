@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AETHERIA: Automatización con IA + WhatsApp Business. Contacto: 643 199 580">
+  <title>AETHERIA | IA + Automatización + WhatsApp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary:#7c4dff; --primary-dark:#5c35cc;
+      --secondary:#00d4aa; --secondary-dark:#009c80;
+      --whatsapp:#25D366; --whatsapp-dark:#128C7E;
+      --dark:#07070f; --card:#10101c; --surface:#0c0c18;
+      --text:#eeeeff; --muted:rgba(238,238,255,0.52);
+      --border:rgba(255,255,255,0.07); --radius:16px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--text);line-height:1.65;padding-bottom:80px}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    
+    /* HEADER */
+    header{position:relative;padding:60px 0 90px;text-align:center;overflow:hidden;border-bottom:1px solid rgba(124,77,255,0.2);min-height:620px;display:flex;align-items:center}
+    .hbg{position:absolute;inset:0;background-image:url('data:image/jpeg;base64,...');background-size:cover;background-position:center}
+    .hov{position:absolute;inset:0;background:linear-gradient(160deg,rgba(20,8,50,0.88) 0%,rgba(7,7,20,0.93) 100%),radial-gradient(ellipse 80% 50% at 50% -10%,rgba(124,77,255,0.25) 0%,transparent 70%)}
+    .hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(124,77,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(124,77,255,0.05) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black,transparent)}
+    header .container{position:relative;z-index:3;width:100%}
+    .logo-wrap{display:flex;justify-content:center;margin-bottom:28px}
+    .logo{width:210px;height:210px;object-fit:contain;filter:drop-shadow(0 0 35px rgba(124,77,255,0.7)) drop-shadow(0 0 70px rgba(0,212,170,0.25));animation:float 4s ease-in-out infinite}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(124,77,255,0.12);border:1px solid rgba(124,77,255,0.28);padding:7px 18px;border-radius:50px;font-size:.85rem;margin-bottom:22px;color:#c4b3ff;font-family:'Syne',sans-serif;letter-spacing:.02em}
+    header h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;margin-bottom:18px;line-height:1.15;text-shadow:0 2px 20px rgba(0,0,0,0.5)}
+    header h1 span{background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    header p{font-size:1.1rem;color:rgba(238,238,255,0.75);max-width:560px;margin:0 auto 34px;text-shadow:0 1px 8px rgba(0,0,0,0.6)}
+    .st-dot{width:6px;height:6px;background:#7fff7f;border-radius:50%;animation:blink 2s infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .contact-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:12px;font-weight:600;text-decoration:none;transition:all .3s;border:none;cursor:pointer;font-size:.93rem;font-family:'DM Sans',sans-serif}
+    .btn-wa{background:var(--whatsapp);color:#fff}
+    .btn-wa:hover{background:var(--whatsapp-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,.4)}
+    .btn-phone{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(4px)}
+    .btn-phone:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+    .btn-email{background:rgba(124,77,255,.18);color:#c4b3ff;border:1px solid rgba(124,77,255,.32);backdrop-filter:blur(4px)}
+    .btn-email:hover{background:rgba(124,77,255,.28);transform:translateY(-2px)}
+    
+    /* STATS */
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;margin:50px 0}
+    .stat{background:var(--card);padding:26px;border-radius:var(--radius);border:1px solid var(--border);text-align:center;transition:all .3s;position:relative;overflow:hidden}
+    .stat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--primary),var(--secondary));opacity:0;transition:opacity .3s}
+    .stat:hover{transform:translateY(-4px);border-color:rgba(124,77,255,.25)}
+    .stat:hover::before{opacity:1}
+    .stat-value{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
+    .stat-label{color:var(--muted);font-size:.85rem}
+    
+    /* SECTIONS */
+    section{padding:80px 0}
+    .section-title{text-align:center;margin-bottom:48px}
+    .section-title h2{font-family:'Syne',sans-serif;font-size:2rem;font-weight:700;margin-bottom:12px}
+    .section-title p{color:var(--muted);max-width:600px;margin:0 auto}
+    
+    /* SERVICES */
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .service-card{background:var(--card);padding:28px;border-radius:var(--radius);border:1px solid var(--border);transition:all .25s}
+    .service-card:hover{transform:translateY(-5px);border-color:rgba(124,77,255,.4);box-shadow:0 10px 40px rgba(124,77,255,.1)}
+    .service-icon{width:50px;height:50px;background:linear-gradient(135deg,rgba(124,77,255,.18),rgba(0,212,170,.12));border:1px solid rgba(124,77,255,.22);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.35rem;margin-bottom:18px}
+    .service-card h3{font-family:'Syne',sans-serif;font-weight:700;margin-bottom:10px;font-size:1.1rem}
+    .service-card p{color:var(--muted);font-size:.91rem}
+    .service-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+    .tag{background:rgba(124,77,255,.08);border:1px solid rgba(124,77,255,.18);padding:3px 11px;border-radius:50px;font-size:.72rem;color:#b39dff}
+    
+    /* TESTIMONIALS */
+    .testimonials{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+    .testimonial{background:var(--card);padding:26px;border-radius:var(--radius);border:1px solid var(--border);transition:border-color .3s}
+    .testimonial:hover{border-color:rgba(0,212,170,.3)}
+    .testimonial-text{font-style:italic;margin-bottom:18px;color:var(--muted);font-size:.93rem}
+    .testimonial-author{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+    .avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:'Syne',sans-serif}
+    .author-info strong{display:block;font-family:'Syne',sans-serif}
+    .author-info span{font-size:.85rem;color:var(--muted)}
+    .result-badge{display:inline-block;background:rgba(0,212,170,.1);color:#00d4aa;border:1px solid rgba(0,212,170,.25);padding:4px 12px;border-radius:50px;font-size:.78rem;font-weight:600}
+    
+    /* FAQ */
+    .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:11px}
+    .faq-item{background:var(--card);border-radius:var(--radius);border:1px solid var(--border);overflow:hidden}
+    .faq-q{width:100%;padding:19px 22px;background:none;border:none;color:var(--text);text-align:left;font-size:.95rem;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'DM Sans',sans-serif}
+    .faq-icon{font-size:1.3rem;color:var(--primary);transition:transform .3s}
+    .faq-item.active .faq-icon{transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .35s;padding:0 22px}
+    .faq-item.active .faq-a{max-height:300px;padding:0 22px 18px}
+    .faq-a p{color:var(--muted);font-size:.9rem}
+    
+    /* CTA SECTION */
+    .cta-section{background:linear-gradient(135deg,rgba(124,77,255,.08),rgba(0,212,170,.04));border:1px solid rgba(124,77,255,.18);border-radius:24px;margin:40px auto;max-width:1000px;padding:50px 28px;text-align:center}
+    .cta-section h2{font-family:'Syne',sans-serif;font-size:1.75rem;font-weight:700;margin-bottom:14px}
+    .contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;margin-top:28px}
+    .contact-card{background:var(--card);padding:26px;border-radius:var(--radius);border:1px solid var(--border);text-align:center}
+    .contact-card h3{font-family:'Syne',sans-serif;margin-bottom:9px}
+    .contact-card p{color:var(--muted);margin-bottom:16px;font-size:.87rem}
+    
+    /* PRICING */
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .pack{background:var(--card);padding:32px 28px;border-radius:20px;border:1px solid var(--border);position:relative;overflow:hidden;transition:all .3s;cursor:pointer}
+    .pack:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(124,77,255,.15)}
+    .pack.featured{border-color:rgba(124,77,255,.45);box-shadow:0 0 0 1px rgba(124,77,255,.18)}
+    .pack-badge{position:absolute;top:16px;right:16px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:3px 12px;border-radius:50px;font-size:.69rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .pack-icon{font-size:2.4rem;margin-bottom:14px}
+    .pack-name{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:4px}
+    .pack-tagline{font-size:.82rem;color:var(--muted);margin-bottom:20px}
+    .pack-price{margin-bottom:20px;text-align:center}
+    .pack-price .amount{font-family:'Syne',sans-serif;font-size:2.3rem;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .pack-price .period{font-size:.85rem;color:var(--muted);margin-left:4px}
+    .pack-price .note{font-size:.77rem;color:var(--muted);margin-top:5px}
+    .pack-divider{height:1px;background:var(--border);margin:16px 0}
+    .pack-features{list-style:none;padding:0;margin-bottom:24px;flex:1}
+    .pack-features li{font-size:.85rem;color:var(--muted);padding:6px 0;display:flex;align-items:flex-start;gap:9px;line-height:1.45;border-bottom:1px solid rgba(124,77,255,.07)}
+    .pack-features li:last-child{border-bottom:none}
+    .pack-features li::before{content:'✓';color:var(--secondary);font-weight:700;font-size:.78rem;flex-shrink:0;margin-top:1px}
+    .pack-cta{display:block;text-align:center;padding:13px 20px;border-radius:12px;border:none;font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;transition:all .3s;text-decoration:none;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
+    .pack-cta:hover{opacity:.9;transform:translateY(-1px);box-shadow:0 8px 24px rgba(124,77,255,.35)}
+    .pack-cta.ghost{background:rgba(124,77,255,.1);border:1px solid rgba(124,77,255,.3);color:#b39dff}
+    .pack-cta.ghost:hover{background:rgba(124,77,255,.2);box-shadow:none}
+    
+    /* PACK MODAL */
+    .pack-modal-overlay{display:none;position:fixed;inset:0;background:rgba(7,7,15,.96);z-index:2000;overflow-y:auto;padding:40px 20px 80px;animation:pmIn .22s ease}
+    @keyframes pmIn{from{opacity:0}to{opacity:1}}
+    .pack-modal{max-width:560px;margin:0 auto;background:var(--card);border-radius:22px;border:1px solid rgba(124,77,255,.3);box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden}
+    .pm-head{background:linear-gradient(135deg,#1a0a3a,#0a2520);padding:22px 26px;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden}
+    .pm-head::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,77,255,.18),rgba(0,212,170,.08))}
+    .pm-head-l{position:relative;z-index:1}
+    .pm-icon-lg{font-size:1.8rem;margin-bottom:5px}
+    .pm-head-l h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:800;background:linear-gradient(135deg,#b39dff,var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .pm-close{background:rgba(255,255,255,.12);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;transition:background .25s;position:relative;z-index:1;flex-shrink:0}
+    .pm-close:hover{background:rgba(255,255,255,.25)}
+    .pm-body{padding:26px}
+    .pm-price-block{background:linear-gradient(135deg,rgba(124,77,255,.08),rgba(0,212,170,.04));border:1px solid rgba(124,77,255,.2);border-radius:13px;padding:16px;margin-bottom:22px;text-align:center}
+    .pm-price-main{font-family:'Syne',sans-serif;font-size:2.1rem;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .pm-price-period{font-size:.83rem;color:var(--muted)}
+    .pm-not{background:rgba(255,100,100,.06);border:1px solid rgba(255,100,100,.12);border-radius:10px;padding:11px 13px;margin-top:10px}
+    .pm-not p{font-size:.78rem;color:rgba(255,160,160,.7)}
+    .pm-stitle{font-family:'Syne',sans-serif;font-weight:700;font-size:.87rem;color:#b39dff;margin:18px 0 9px}
+    .pm-list{list-style:none;padding:0;margin-bottom:6px}
+    .pm-list li{font-size:.85rem;color:var(--muted);padding:6px 0;display:flex;align-items:flex-start;gap:8px}
+    .pm-list li .fi{color:var(--secondary);font-weight:700;font-size:.78rem;margin-top:2px}
+    .pm-cta-big{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px;border-radius:13px;border:none;background:var(--whatsapp);color:#fff;font-family:'Syne',sans-serif;font-size:.92rem;font-weight:700;cursor:pointer;transition:all .3s;text-decoration:none;margin-top:22px}
+    .pm-cta-big:hover{background:var(--whatsapp-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.4)}
+    
+    /* LEGAL OVERLAY */
+    .legal-overlay{display:none;position:fixed;inset:0;background:rgba(7,7,15,.96);z-index:2000;overflow-y:auto;padding:40px 20px 80px;animation:pmIn .22s ease}
+    .legal-wrap{max-width:680px;margin:0 auto;background:var(--card);border-radius:22px;border:1px solid rgba(124,77,255,.3);box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:hidden;padding:30px}
+    .legal-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+    .legal-header h2{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .legal-close{background:rgba(255,255,255,.1);border:none;color:#fff;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem}
+    .legal-section{margin-bottom:20px}
+    .legal-section h3{font-family:'Syne',sans-serif;font-size:1.1rem;margin-bottom:8px;color:var(--text)}
+    .legal-section p, .legal-section li{color:var(--muted);font-size:.9rem;line-height:1.6}
+    .legal-section a{color:var(--secondary);text-decoration:none}
+    .legal-section a:hover{text-decoration:underline}
+    .legal-highlight{background:rgba(124,77,255,.08);padding:12px 14px;border-radius:8px;margin-bottom:12px;border:1px solid rgba(124,77,255,.15)}
+    .legal-highlight p{margin:0 0 6px 0}
+    .legal-divider{height:1px;background:var(--border);margin:20px 0}
+    .legal-contact h4{font-family:'Syne',sans-serif;font-size:1rem;margin-bottom:8px;color:var(--text)}
+    .legal-contact a{color:var(--secondary)}
+    
+    /* CHAT WIDGET */
+    #chat-btn {position:fixed; bottom:100px; right:24px;width:64px; height:64px;background:linear-gradient(135deg,rgba(124,77,255,0.9),rgba(0,156,128,0.85));border-radius:50%; border:none; cursor:pointer;display:flex; align-items:center; justify-content:center;box-shadow:0 8px 28px rgba(124,77,255,.55);z-index:999; transition:all .3s;padding:0; overflow:hidden}
+    #chat-btn img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+    #chat-btn:hover{transform:scale(1.1);box-shadow:0 12px 36px rgba(124,77,255,.7)}
+    .chat-tooltip{position:absolute; right:72px;background:#111827; color:#fff;padding:7px 13px; border-radius:9px;font-size:.78rem; white-space:nowrap;opacity:0; pointer-events:none; transition:opacity .3s;border:1px solid rgba(124,77,255,.3);font-family:'DM Sans',sans-serif;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+    #chat-btn:hover .chat-tooltip{opacity:1}
+    
+    #chat-window{display:none;position:fixed; bottom:100px; right:100px;width:400px; max-width:calc(100vw - 48px);height:580px;background:var(--card);border-radius:22px;box-shadow:0 25px 70px rgba(0,0,0,.55),0 0 0 1px rgba(124,77,255,.22);z-index:999; flex-direction:column;overflow:hidden; border:1px solid rgba(124,77,255,.22);animation:chatIn .3s cubic-bezier(.34,1.56,.64,1)}
+    @keyframes chatIn{from{opacity:0;transform:scale(.85) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+    #chat-head{background:linear-gradient(135deg,#1a0a3a,#0a2520);border-bottom:1px solid rgba(124,77,255,.2);padding:14px 18px;display:flex; align-items:center; justify-content:space-between;flex-shrink:0; position:relative; overflow:hidden}
+    #chat-head::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,77,255,.15),rgba(0,212,170,.08))}
+    .ch-info{display:flex;align-items:center;gap:11px;position:relative;z-index:1}
+    .ch-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;border:2px solid rgba(124,77,255,.4);box-shadow:0 0 16px rgba(124,77,255,.35);flex-shrink:0}
+    .ch-avatar img{width:100%;height:100%;object-fit:cover}
+    .ch-name{font-family:'Syne',sans-serif;font-weight:700;font-size:.92rem;background:linear-gradient(135deg,#b39dff,var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    .ch-sub{font-size:.7rem;color:var(--muted);display:flex;align-items:center;gap:4px;margin-top:2px}
+    #chat-x{background:rgba(255,255,255,.15);border:none;color:#fff;font-size:1.2rem;width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s;flex-shrink:0;position:relative;z-index:1}
+    #chat-x:hover{background:rgba(255,255,255,.28)}
+    #chat-msgs{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:13px;scroll-behavior:smooth}
+    #chat-msgs::-webkit-scrollbar{width:3px}
+    #chat-msgs::-webkit-scrollbar-thumb{background:rgba(124,77,255,.3);border-radius:2px}
+    .msg{display:flex;animation:msgIn .28s ease}
+    @keyframes msgIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    .msg.bot{justify-content:flex-start}
+    .msg.user{justify-content:flex-end}
+    .bubble{max-width:83%;padding:11px 15px;border-radius:18px;font-size:.88rem;line-height:1.55}
+    .msg.bot .bubble{background:var(--surface);border:1px solid rgba(124,77,255,.14);color:var(--text);border-bottom-left-radius:4px}
+    .msg.user .bubble{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;border-bottom-right-radius:4px}
+    .typing{display:flex;align-items:center;gap:4px;padding:12px 16px;background:var(--surface);border:1px solid rgba(124,77,255,.14);border-radius:18px;border-bottom-left-radius:4px;width:fit-content}
+    .t-dot{width:7px;height:7px;background:var(--primary);border-radius:50%;animation:tdot 1.2s infinite}
+    .t-dot:nth-child(2){animation-delay:.15s}
+    .t-dot:nth-child(3){animation-delay:.3s}
+    @keyframes tdot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+    #qr-wrap{padding:0 14px 10px;display:flex;flex-wrap:wrap;gap:7px;flex-shrink:0}
+    .qr{background:rgba(124,77,255,.1);border:1px solid rgba(124,77,255,.25);color:#b39dff;padding:6px 13px;border-radius:20px;font-size:.78rem;cursor:pointer;transition:all .25s;font-family:'DM Sans',sans-serif}
+    .qr:hover{background:rgba(124,77,255,.22);color:#fff;border-color:rgba(124,77,255,.45)}
+    #chat-bar{display:flex;gap:9px;padding:12px 14px;border-top:1px solid var(--border);background:var(--surface);flex-shrink:0}
+    #chat-in{flex:1;padding:10px 15px;border:1px solid var(--border);border-radius:22px;background:var(--card);color:var(--text);font-family:'DM Sans',sans-serif;font-size:.87rem;outline:none;transition:border-color .3s}
+    #chat-in:focus{border-color:rgba(124,77,255,.45)}
+    #chat-in::placeholder{color:var(--muted)}
+    #chat-go{width:42px;height:42px;border-radius:50%;border:none;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.05rem;transition:all .3s;flex-shrink:0}
+    #chat-go:hover{transform:scale(1.1);box-shadow:0 4px 16px rgba(124,77,255,.4)}
+    .chat-foot{text-align:center;font-size:.68rem;color:rgba(238,238,255,.18);padding:7px;background:var(--surface);flex-shrink:0;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:center;gap:5px}
+    .chat-foot img{width:13px;height:13px;object-fit:contain;border-radius:50%;opacity:.35}
+    .chat-foot span{color:rgba(124,77,255,.45);font-weight:600}
+    
+    /* WHATSAPP FLOAT */
+    .wa-float {position:fixed; bottom:24px; right:24px;width:64px; height:64px;background:var(--whatsapp);border-radius:50%;display:flex; align-items:center; justify-content:center;box-shadow:0 8px 28px rgba(37,211,102,.55);z-index:1000; text-decoration:none;transition:all .3s;animation:waPulse 2.5s infinite}
+    @keyframes waPulse{0%,100%{box-shadow:0 8px 28px rgba(37,211,102,.55)}50%{box-shadow:0 8px 40px rgba(37,211,102,.9),0 0 0 10px rgba(37,211,102,.1)}}
+    .wa-float:hover{transform:scale(1.12);background:var(--whatsapp-dark);animation:none;box-shadow:0 12px 36px rgba(37,211,102,.65)}
+    .wa-float svg{width:38px;height:38px}
+    .wa-tooltip{position:absolute; right:72px;background:#111827; color:#fff;padding:7px 13px; border-radius:9px;font-size:.78rem; white-space:nowrap;opacity:0; pointer-events:none; transition:opacity .3s;border:1px solid rgba(37,211,102,.3);font-family:'DM Sans',sans-serif;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+    .wa-float:hover .wa-tooltip{opacity:1}
+    
+    /* FOOTER */
+    footer{background:var(--surface);color:var(--muted);text-align:center;padding:28px 0;border-top:1px solid var(--border);margin-top:80px;font-size:.88rem}
+    .footer-contact{margin-top:8px;display:flex;flex-direction:column;gap:4px}
+    .footer-contact span{color:var(--secondary)}
+    
+    @media(max-width:768px){
+      .pack{padding:28px 20px}
+      #chat-window{right:16px;left:16px;bottom:100px;right:16px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="hbg"></div><div class="hov"></div><div class="hgrid"></div>
+    <div class="container">
+      <div class="logo-wrap">
+        <img src="data:image/png;base64,..." alt="AETHERIA Logo" class="logo">
+      </div>
+      <div class="badge"><span class="st-dot"></span> IA + WhatsApp Business + Automatización</div>
+      <h1>Transforma tu Negocio con<br><span>Inteligencia Artificial</span></h1>
+      <p>Atiende, vende y escala con chatbots inteligentes y flujos automáticos en WhatsApp 24/7.</p>
+      <div class="contact-cta">
+        <a href="https://wa.me/34643199580?text=Hola%20AETHERIA,%20quiero%20m%C3%A1s%20informaci%C3%B3n" class="btn btn-wa" target="_blank">💬 Hablar por WhatsApp</a>
+        <a href="tel:+34643199580" class="btn btn-phone">📞 Llamar ahora</a>
+        <a href="mailto:comercialaetheria@aetheria.es" class="btn btn-email">✉️ comercialaetheria@aetheria.es</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="container">
+    <div class="stats">
+      <div class="stat"><div class="stat-value">+150</div><div class="stat-label">Clientes Satisfechos</div></div>
+      <div class="stat"><div class="stat-value">98%</div><div class="stat-label">Tasa de Apertura</div></div>
+      <div class="stat"><div class="stat-value">24/7</div><div class="stat-label">Disponibilidad</div></div>
+      <div class="stat"><div class="stat-value">&lt;5min</div><div class="stat-label">Tiempo de Respuesta</div></div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section>
+    <div class="container">
+      <div class="section-title"><h2>🛠️ Nuestros Servicios</h2><p>Soluciones de automatización e IA adaptadas a tu negocio.</p></div>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-icon">📱</div><h3>Automatización WhatsApp</h3><p>Chatbots que atienden, califican y convierten leads automáticamente en WhatsApp Business.</p><div class="service-tags"><span class="tag">WhatsApp API</span><span class="tag">ManyChat</span><span class="tag">Zapier</span></div></div>
+        <div class="service-card"><div class="service-icon">🤖</div><h3>Chatbots IA</h3><p>Asistentes virtuales con IA que entienden contexto y responden como humanos, disponibles 24/7.</p><div class="service-tags"><span class="tag">GPT-4</span><span class="tag">NLP</span><span class="tag">Machine Learning</span></div></div>
+        <div class="service-card"><div class="service-icon">📊</div><h3>Marketing Predictivo</h3><p>Analizamos datos para optimizar campañas y lanzar mensajes en el momento perfecto.</p><div class="service-tags"><span class="tag">Google Ads</span><span class="tag">Meta</span><span class="tag">Analytics</span></div></div>
+        <div class="service-card"><div class="service-icon">🎯</div><h3>Embudos Inteligentes</h3><p>Rutas personalizadas que adaptan el mensaje según el comportamiento en tiempo real.</p><div class="service-tags"><span class="tag">Personalización</span><span class="tag">CRO</span><span class="tag">A/B Testing</span></div></div>
+        <div class="service-card"><div class="service-icon">✍️</div><h3>Contenido IA</h3><p>Copy persuasivo para emails, posts y WhatsApp, entrenado con tu voz de marca.</p><div class="service-tags"><span class="tag">Copywriting</span><span class="tag">SEO</span><span class="tag">Multicanal</span></div></div>
+        <div class="service-card"><div class="service-icon">🔍</div><h3>Business Intelligence</h3><p>Dashboards con métricas clave: apertura, conversión, CAC y ROI en tiempo real.</p><div class="service-tags"><span class="tag">Power BI</span><span class="tag">Meta API</span><span class="tag">Python</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-title"><h2>⭐ Resultados Reales</h2></div>
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p class="testimonial-text">"Automatizamos captación por IG + WhatsApp. El chatbot califica, agenda y envía propuestas. ¡Nuestro equipo solo cierra!"</p>
+          <div class="testimonial-author"><div class="avatar">MR</div><div class="author-info"><strong>Marcos R.</strong><span>Agencia de Seguros</span></div></div>
+          <span class="result-badge">📈 +300% leads cualificados</span>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-text">"Los recordatorios automáticos por WhatsApp redujeron no-shows a cero. 98% de apertura vs 20% email."</p>
+          <div class="testimonial-author"><div class="avatar">MT</div><div class="author-info"><strong>Marc T.</strong><span>Podólogos Avanzados</span></div></div>
+          <span class="result-badge">✅ 0% no-shows</span>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-text">"El chatbot atiende 24/7. Cuando necesita humano, transfiere con contexto completo. ¡Como tener 3 recepcionistas!"</p>
+          <div class="testimonial-author"><div class="avatar">LP</div><div class="author-info"><strong>Laura P.</strong><span>Clínica Dental Sonrisas</span></div></div>
+          <span class="result-badge">⏰ Ahorro 20h/semana</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section>
+    <div class="container">
+      <div class="section-title"><h2>💎 Nuestros Packs</h2><p>Soluciones adaptadas a cada etapa de tu negocio. Sin permanencias, sin letra pequeña.</p></div>
+      <div class="pricing-grid">
+        <div class="pack" onclick="openPack('basic')">
+          <div class="pack-icon">🤖</div><div class="pack-name">Pack Basic</div><div class="pack-tagline">Chatbot IA informativo para tu negocio</div>
+          <div class="pack-price"><span class="amount">299€</span><span class="period">/mes</span><div class="note">Sin permanencia · Activación en 48h</div></div><div class="pack-divider"></div>
+          <ul class="pack-features"><li>Chatbot IA en tu web o QR</li><li>Informa sobre tus servicios y precios</li><li>Responde preguntas frecuentes 24/7</li><li>Botón directo a tu WhatsApp</li><li>Diseño con tu marca y colores</li><li>Alojado en GitHub Pages</li></ul>
+          <button class="pack-cta ghost">Ver detalles →</button>
+        </div>
+        <div class="pack featured" onclick="openPack('advance')">
+          <div class="pack-badge">⭐ Más popular</div><div class="pack-icon">💬</div><div class="pack-name">Pack Advance</div><div class="pack-tagline">Chatbot IA conversacional e interactivo</div>
+          <div class="pack-price"><span class="amount">399€</span><span class="period">/mes</span><div class="note">Sin permanencia · Activación en 48h</div></div><div class="pack-divider"></div>
+          <ul class="pack-features"><li>Todo lo del Pack Basic</li><li>El cliente puede escribir libremente</li><li>IA detecta intención y responde en contexto</li><li>Flujos de cualificación de leads</li><li>Captación de datos por WhatsApp</li><li>Respuestas rápidas personalizadas</li><li>Actualización de contenidos incluida</li></ul>
+          <button class="pack-cta">Ver detalles →</button>
+        </div>
+        <div class="pack" onclick="openPack('enterprise')">
+          <div class="pack-icon">⚙️</div><div class="pack-name">Pack Enterprise</div><div class="pack-tagline">Automatización completa a medida</div>
+          <div class="pack-price"><span class="amount">1.599€</span><div class="note">Pago único de configuración · + 1.199€/año mantenimiento</div></div><div class="pack-divider"></div>
+          <ul class="pack-features"><li>Flujos N8N completos a medida</li><li>Google Sheets como base de datos</li><li>Google Calendar con citas automáticas</li><li>Emails y WhatsApp automáticos</li><li>Recordatorios y seguimientos</li><li>Integraciones con CRM y APIs</li><li>Soporte y mantenimiento anual</li></ul>
+          <button class="pack-cta ghost">Ver detalles →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACK MODAL -->
+  <div id="pack-modal-overlay" class="pack-modal-overlay" onclick="closePackOut(event)">
+    <div class="pack-modal">
+      <div class="pm-head">
+        <div class="pm-head-l"><div class="pm-icon-lg" id="pm-icon"></div><h3 id="pm-title"></h3></div>
+        <button class="pm-close" onclick="closePack()">×</button>
+      </div>
+      <div class="pm-body" id="pm-body"></div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section style="background:#0c0c18;padding:80px 0">
+    <div class="container">
+      <div class="section-title"><h2>❓ Preguntas Frecuentes</h2><p>Todo lo que necesitas saber antes de empezar.</p></div>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Cuánto tiempo tarda la implementación?<span class="faq-icon">＋</span></button><div class="faq-a"><p>La mayoría de automatizaciones están operativas en 3-7 días. Incluye configuración, pruebas y formación de tu equipo.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Necesito conocimientos técnicos?<span class="faq-icon">＋</span></button><div class="faq-a"><p>Para nada. Nos encargamos de toda la parte técnica. Tú solo nos cuentas tu proceso actual y nosotros lo automatizamos.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Cuál es el precio?<span class="faq-icon">＋</span></button><div class="faq-a"><p>Los chatbots y suscripciones parten desde 399€/mes. Las automatizaciones completas desde 1.499€ de configuración + mantenimiento desde 1.200€/año. Siempre hacemos presupuesto personalizado sin compromiso.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Puedo ver una demo antes de contratar?<span class="faq-icon">＋</span></button><div class="faq-a"><p>Sí. Tenemos demos en vivo para distintos sectores. Contáctanos y te enviamos el enlace o agendamos una videollamada de 20 minutos.</p></div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">¿Cómo me contacto con vosotros?<span class="faq-icon">＋</span></button><div class="faq-a"><p>Por WhatsApp al 643 199 580, llamada directa o email a comercialaetheria@aetheria.es. Respondemos en menos de 5 minutos en horario laboral.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section style="background:#07070f">
+    <div class="container">
+      <div class="cta-section">
+        <h2>🎯 ¿Hablamos?</h2>
+        <p style="color:var(--muted);max-width:480px;margin:0 auto">Sin formularios, sin esperas. Respuesta en menos de 5 minutos.</p>
+        <div class="contact-cards">
+          <div class="contact-card"><h3>💬 WhatsApp</h3><p>Te respondemos al instante con información personalizada.</p><a href="https://wa.me/34643199580?text=Hola%20AETHERIA,%20quiero%20m%C3%A1s%20informaci%C3%B3n" class="btn btn-wa" target="_blank">Chatear ahora</a></div>
+          <div class="contact-card"><h3>📞 Llamada</h3><p>Habla directamente con nuestro equipo ahora mismo.</p><a href="tel:+34643199580" class="btn btn-phone">643 199 580</a></div>
+          <div class="contact-card"><h3>✉️ Email</h3><p>Envíanos tu consulta y recibe un presupuesto detallado.</p><a href="mailto:comercialaetheria@aetheria.es" class="btn btn-email">Enviar email</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="yr"></span> AETHERIA Consulting. Todos los derechos reservados.</p>
+      <div class="footer-contact"><span>📞 643 199 580</span><span>✉️ comercialaetheria@aetheria.es</span></div>
+      <div style="margin-top:16px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <button onclick="openLegal('aviso')" style="background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:underline;padding:0">Aviso Legal</button>
+        <button onclick="openLegal('privacidad')" style="background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:underline;padding:0">Política de Privacidad</button>
+        <button onclick="openLegal('cookies')" style="background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:underline;padding:0">Política de Cookies</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTONES FLOTANTES -->
+  <a href="https://wa.me/34643199580?text=Hola%20AETHERIA,%20necesito%20informaci%C3%B3n" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Business AETHERIA">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="36" height="36"><path fill="white" d="M16 2C8.268 2 2 8.268 2 16c0 2.49.638 4.83 1.757 6.865L2 30l7.331-1.724A13.916 13.916 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z"/><path fill="#25D366" d="M21.93 19.177c-.313-.157-1.852-.914-2.139-1.018-.286-.104-.494-.157-.703.157-.208.314-.807 1.018-.989 1.227-.183.208-.365.234-.678.078-.313-.157-1.322-.487-2.518-1.553-.93-.83-1.558-1.854-1.74-2.168-.183-.313-.019-.483.137-.639.141-.14.313-.365.47-.548.156-.183.208-.313.313-.522.104-.208.052-.391-.026-.548-.078-.157-.703-1.695-.963-2.322-.254-.61-.512-.527-.703-.537l-.6-.01c-.208 0-.548.078-.835.391-.286.313-1.096 1.07-1.096 2.609s1.122 3.026 1.279 3.235c.156.208 2.208 3.373 5.35 4.728.748.323 1.332.516 1.787.661.751.239 1.435.205 1.976.124.603-.09 1.852-.757 2.113-1.488.26-.731.26-1.358.183-1.488-.078-.131-.286-.209-.6-.366z"/></svg>
+    <span class="wa-tooltip">💬 Escríbenos por WhatsApp</span>
+  </a>
+
+  <!-- CHAT IA -->
+  <button id="chat-btn" onclick="toggleChat()" aria-label="Abrir Agente IA AETHERIA">
+    <img src="data:image/png;base64,..." alt="Chat IA">
+    <span class="chat-tooltip">💬 Habla con nuestro Agente IA</span>
+  </button>
+  <div id="chat-window">
+    <div id="chat-head">
+      <div class="ch-info">
+        <div class="ch-avatar"><img src="data:image/png;base64,..." alt="Agente IA"></div>
+        <div><div class="ch-name">Agente IA</div><div class="ch-sub"><span class="st-dot"></span> AETHERIA · En línea ahora</div></div>
+      </div>
+      <button id="chat-x" onclick="toggleChat()">×</button>
+    </div>
+    <div id="chat-msgs"></div>
+    <div id="qr-wrap"></div>
+    <div id="chat-bar">
+      <input type="text" id="chat-in" placeholder="Escribe tu mensaje..." onkeypress="onKey(event)">
+      <button id="chat-go" onclick="send()">➤</button>
+    </div>
+    <div class="chat-foot">
+      <img src="data:image/png;base64,..." alt="Logo"><span>IA + Automatización + WhatsApp</span>
+    </div>
+  </div>
+
+  <!-- LEGAL OVERLAY -->
+  <div id="legal-overlay" class="legal-overlay" onclick="closeLegalOut(event)">
+    <div class="legal-wrap">
+      <div class="legal-header"><h2 id="legal-title">Aviso Legal</h2><button class="legal-close" onclick="closeLegal()">×</button></div>
+      <div id="legal-content"></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    function toggleFaq(btn){const item=btn.parentElement, was=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));if(!was) item.classList.add('active');}
+    
+    const KB = {
+      servicios:{ kw:['servicio','ofreceis','ofrecéis','teneis','tienes','haceis','hacéis','catálogo','productos'],answer:`Ofrecemos 6 líneas principales:<br><br>📱 <b>Automatización WhatsApp</b> – chatbots que atienden y convierten 24/7<br>🤖 <b>Chatbots con IA</b> – asistentes que entienden contexto como un humano<br>📊 <b>Marketing Predictivo</b> – campañas optimizadas por datos<br>🎯 <b>Embudos Inteligentes</b> – flujos que adaptan el mensaje en tiempo real<br>✍️ <b>Contenido IA</b> – copy persuasivo entrenado con tu marca<br>🔍 <b>Business Intelligence</b> – dashboards de conversión y ROI`,replies:['Solicitar presupuesto','Ver demo gratis','Hablar con el equipo']},
+      whatsapp:{ kw:['whatsapp','wsp','wa','wasap','business'],answer:`📱 <b>Automatización WhatsApp Business:</b><br><br>✅ Respuesta instantánea a cualquier hora<br>✅ Cualificación automática de leads<br>✅ Envío de propuestas y catálogos<br>✅ Recordatorios de cita y seguimiento<br>✅ Integración con tu CRM<br><br>Tasa de apertura media: <b>98%</b> vs 20% del email.`,replies:['¿Cuánto cuesta?','Ver demo','Hablar con el equipo']},
+      chatbot:{ kw:['chatbot','chat bot','bot','ia','inteligencia artificial','asistente','virtual','robot'],answer:`🤖 <b>Chatbots con IA:</b><br><br>✅ Disponibles 24/7 sin descanso<br>✅ Entienden contexto y conversación fluida<br>✅ Aprenden de tu base de conocimiento<br>✅ Transfieren al equipo humano cuando hace falta<br>✅ Agendado de citas automático<br><br>Nuestros clientes ahorran una media de <b>20h semanales</b>.`,replies:['¿Cuánto cuesta?','Ver demo','Automatización WhatsApp']},
+      demo:{ kw:['demo','demostración','demostracion','ver','prueba','ejemplo','muestra','probar'],answer:`🎬 <b>Demos disponibles por sector:</b><br><br>🏥 Clínicas y centros de salud<br>💆 Estética y belleza<br>🦷 Clínicas dentales<br>✂️ Peluquerías<br>🏢 Negocios locales<br><br>La demo es <b>gratuita</b> y sin compromiso. 20 minutos online o enlace directo.`,replies:['Pedir demo por WhatsApp','¿Cuánto cuesta?','Hablar con el equipo']},
+      tiempo:{ kw:['tiempo','plazo','cuanto tarda','implementacion','días','semanas','rapido','rápido'],answer:`⏱️ La mayoría de sistemas están <b>operativos en 3-7 días</b>:<br><br>📅 Día 1-2 → Reunión y toma de datos<br>📅 Día 2-5 → Desarrollo y configuración<br>📅 Día 5-6 → Pruebas y validación<br>📅 Día 7 → Entrega y formación`,replies:['¿Cuánto cuesta?','Ver demo','Hablar con el equipo']},
+      contacto:{ kw:['contacto','contactar','hablar','llamar','email','correo','reunion','cita','persona'],answer:`📞 <b>Contacto directo:</b><br><br>💬 <b>WhatsApp:</b> <a href="https://wa.me/34643199580" target="_blank" style="color:#25D366;font-weight:600">643 199 580</a><br>📞 <b>Llamada:</b> 643 199 580<br>✉️ <b>Email:</b> <a href="mailto:comercialaetheria@aetheria.es" style="color:#b39dff">comercialaetheria@aetheria.es</a><br><br>Respondemos en <b>menos de 5 minutos</b>.`,replies:['Abrir WhatsApp','Enviar email','Ver servicios']},
+      mantenimiento:{ kw:['mantenimiento','soporte','incluye','renovacion','anual'],answer:`🔧 <b>Mantenimiento anual incluye:</b><br><br>✅ Actualizaciones del sistema<br>✅ Soporte técnico prioritario<br>✅ Monitorización y alertas<br>✅ Ajustes de flujos<br>✅ Informes de rendimiento mensuales<br><br>Desde <b>1.200€/año</b> según el proyecto.`,replies:['¿Cuánto cuesta?','Solicitar presupuesto']},
+      precio:{ kw:['precio','coste','costo','cuanto','tarifa','presupuesto','pago','euro','dinero','inversion','inversión','vale','cuesta','cobráis'],answer:`💰 <b>Precios orientativos:</b><br><br>📱 <b>Chatbots y suscripciones</b> → desde <b>399€/mes</b><br><br>⚙️ <b>Automatizaciones completas</b><br>&nbsp;&nbsp;→ Configuración desde <b>1.499€</b> (pago único)<br>&nbsp;&nbsp;→ Mantenimiento anual desde <b>1.200€/año</b><br><br>El precio final siempre depende del proyecto. <b>Presupuesto personalizado sin compromiso en menos de 24h.</b>`,replies:['Solicitar presupuesto','Ver demo gratis','Hablar con el equipo']},
+      saludo:{ kw:['hola','buenas','buenos','hey','saludos'],answer:`¡Hola! 👋 Soy el <b>Agente IA</b> de AETHERIA.<br><br>Estoy aquí para resolver tus dudas sobre automatización, chatbots y WhatsApp Business. ¿En qué puedo ayudarte?`,replies:['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Quiero una demo','Contactar']},
+      gracias:{ kw:['gracias','thank','perfecto','genial','entendido'],answer:`¡De nada! 😊 ¿Hay algo más en lo que pueda ayudarte?`,replies:['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Ver demo','Hablar con el equipo']},
+      default:{ answer:`Soy el <b>Agente IA</b> de AETHERIA. Puedo ayudarte con info sobre servicios, precios y demos.<br><br>💬 <a href="https://wa.me/34643199580" target="_blank" style="color:#25D366;font-weight:600">WhatsApp 643 199 580</a> · ✉️ <a href="mailto:comercialaetheria@aetheria.es" style="color:#b39dff">comercialaetheria@aetheria.es</a>`,replies:['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Quiero una demo','Contactar']}
+    };
+
+    const ACTIONS = {
+      'Abrir WhatsApp':()=>window.open('https://wa.me/34643199580','_blank'),
+      'Pedir demo por WhatsApp':()=>window.open('https://wa.me/34643199580?text=Hola%20AETHERIA,%20quiero%20ver%20una%20demo','_blank'),
+      'Solicitar presupuesto':()=>window.open('https://wa.me/34643199580?text=Hola%20AETHERIA,%20quiero%20un%20presupuesto','_blank'),
+      'Hablar con el equipo':()=>window.open('https://wa.me/34643199580','_blank'),
+      'Ver demo gratis':()=>window.open('https://wa.me/34643199580?text=Hola,%20quiero%20ver%20una%20demo%20gratis','_blank'),
+      'Enviar email':()=>window.open('mailto:comercialaetheria@aetheria.es'),
+      'Contactar':()=>window.open('https://wa.me/34643199580','_blank'),
+    };
+
+    let chatOpen=false, inited=false;
+    function toggleChat(){chatOpen=!chatOpen;const w=document.getElementById('chat-window');w.style.display=chatOpen?'flex':'none';if(chatOpen&&!inited){inited=true;initChat();}if(chatOpen) setTimeout(()=>document.getElementById('chat-in').focus(),300);}
+    function initChat(){addMsg('bot','¡Hola! 👋 Soy el <b>Agente IA</b> de AETHERIA. Estoy aquí para resolver tus dudas sobre nuestros servicios de automatización e IA.<br><br>¿En qué puedo ayudarte?');setQR(['¿Qué servicios ofrecéis?','¿Cuánto cuesta?','Quiero una demo','Contactar']);}
+    function addMsg(who,html){const msgs=document.getElementById('chat-msgs');const d=document.createElement('div'); d.className='msg '+who;const b=document.createElement('div'); b.className='bubble'; b.innerHTML=html;d.appendChild(b); msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight;}
+    function showTyping(){const msgs=document.getElementById('chat-msgs');const d=document.createElement('div'); d.className='msg bot'; d.id='typing';d.innerHTML='<div class="typing"><div class="t-dot"></div><div class="t-dot"></div><div class="t-dot"></div></div>';msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight;}
+    function hideTyping(){ const t=document.getElementById('typing'); if(t) t.remove(); }
+    function setQR(arr){const w=document.getElementById('qr-wrap'); w.innerHTML='';arr.forEach(label=>{const b=document.createElement('button'); b.className='qr'; b.textContent=label;b.onclick=()=>handleReply(label); w.appendChild(b);});}
+    function handleReply(label){if(ACTIONS[label]){ addMsg('user',label); setQR([]); ACTIONS[label](); return; }processInput(label);}
+    function getResponse(txt){const t=txt.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');for(const [k,e] of Object.entries(KB)){if(k==='default') continue;if(e.kw&&e.kw.some(kw=>t.includes(kw))) return e;}return KB.default;}
+    function processInput(txt){addMsg('user',txt); setQR([]);showTyping();setTimeout(()=>{hideTyping();const res=getResponse(txt);addMsg('bot',res.answer);if(res.replies) setQR(res.replies);else setQR(['Ver servicios','¿Cuánto cuesta?','Hablar con el equipo']);},800+Math.random()*400);}
+    function send(){const inp=document.getElementById('chat-in');const txt=inp.value.trim(); if(!txt) return;inp.value=''; processInput(txt);}
+    function onKey(e){ if(e.key==='Enter') send(); }
+
+    const PACKS = {
+      basic: {icon: '🤖',title: 'Pack Basic · Chatbot IA',price: '299€/mes',period: 'Mensual · Sin permanencia · Activación en 48h',note: '',features: ['Chatbot IA instalado en tu web o mediante QR imprimible','Informa sobre tus servicios, horarios y precios','Responde preguntas frecuentes de forma automática 24/7','Menú de opciones clicables para guiar al visitante','Botón directo a tu WhatsApp con texto predefinido','Diseño personalizado con tu marca, colores y logo','Alojado en GitHub Pages sin coste adicional','Actualizaciones de contenido incluidas en la mensualidad',],noInclude: 'En este pack el visitante no puede escribir texto libre. El chatbot guía mediante botones y opciones predefinidas.',wa: 'Hola%20AETHERIA,%20quiero%20informaci%C3%B3n%20sobre%20el%20Pack%20Basic%20Chatbot%20IA%20299%E2%82%AC/mes'},
+      advance: {icon: '💬',title: 'Pack Advance · Chatbot IA',price: '399€/mes',period: 'Mensual · Sin permanencia · Activación en 48h',note: '⭐ El pack más completo para captar y cualificar leads',features: ['Todo lo incluido en el Pack Basic','El cliente puede escribir libremente','IA detecta la intención del mensaje y responde en contexto','Flujos de cualificación: recoge nombre, teléfono y necesidad','Captación de leads con envío automático a tu WhatsApp','Respuestas rápidas personalizadas por sector o servicio','Detección de palabras clave para derivar al área correcta','Actualización de contenidos y flujos incluida',],noInclude: '',wa: 'Hola%20AETHERIA,%20quiero%20informaci%C3%B3n%20sobre%20el%20Pack%20Advance%20Chatbot%20IA%20399%E2%82%AC/mes'},
+      enterprise: {icon: '⚙️',title: 'Pack Enterprise · Automatización',price: '1.599€',period: 'Pago único de configuración',note: '+ Mantenimiento anual 1.199€/año (soporte, actualizaciones, informes)',features: ['Flujos de automatización completos con N8N a medida','Google Sheets como base de datos centralizada','Google Calendar: creación automática de citas y eventos','Emails de confirmación y recordatorio automáticos','Recordatorios por WhatsApp con ventana horaria configurable','Nodos de enrutamiento, validación y lógica condicional','Integraciones con CRMs, APIs externas y webhooks','Soporte técnico prioritario y mantenimiento anual incluido','Informes mensuales de actividad y rendimiento',],noInclude: 'El precio final puede variar según la complejidad del proyecto. Siempre hacemos presupuesto personalizado sin compromiso.',wa: 'Hola%20AETHERIA,%20quiero%20informaci%C3%B3n%20sobre%20el%20Pack%20Enterprise%20Automatizaci%C3%B3n'}
+    };
+
+    function openPack(id) {const p = PACKS[id];document.getElementById('pm-icon').textContent = p.icon;document.getElementById('pm-title').textContent = p.title;const body = document.getElementById('pm-body');const notHtml = p.noInclude? '<div class="pm-not"><p>ℹ️ ' + p.noInclude + '</p></div>': '';const noteHtml = p.note? '<div style="font-size:.79rem;color:var(--secondary);margin-top:5px">' + p.note + '</div>': '';body.innerHTML ='<div class="pm-price-block">' +'<div class="pm-price-main">' + p.price + '</div>' +'<div class="pm-price-period">' + p.period + '</div>' +noteHtml +'</div>' +'<div class="pm-stitle">✅ Qué incluye este pack</div>' +'<ul class="pm-list">' +p.features.map(f => '<li><span class="fi">✓</span>' + f + '</li>').join('') +'</ul>' +notHtml +'<a href="https://wa.me/34643199580?text=' + p.wa + '" target="_blank" class="pm-cta-big">' +'<svg width="18" height="18" viewBox="0 0 32 32" fill="white"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.49.638 4.83 1.757 6.865L2 30l7.331-1.724A13.916 13.916 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z"/><path d="M21.93 19.177c-.313-.157-1.852-.914-2.139-1.018-.286-.104-.494-.157-.703.157-.208.314-.807 1.018-.989 1.227-.183.208-.365.234-.678.078-.313-.157-1.322-.487-2.518-1.553-.93-.83-1.558-1.854-1.74-2.168-.183-.313-.019-.483.137-.639.141-.14.313-.365.47-.548.156-.183.208-.313.313-.522.104-.208.052-.391-.026-.548-.078-.157-.703-1.695-.963-2.322-.254-.61-.512-.527-.703-.537l-.6-.01c-.208 0-.548.078-.835.391-.286.313-1.096 1.07-1.096 2.609s1.122 3.026 1.279 3.235c.156.208 2.208 3.373 5.35 4.728.748.323 1.332.516 1.787.661.751.239 1.435.205 1.976.124.603-.09 1.852-.757 2.113-1.488.26-.731.26-1.358.183-1.488-.078-.131-.286-.209-.6-.366z" fill="#25D366"/></svg>' +'Pedir información sobre este pack' +'</a>';document.getElementById('pack-modal-overlay').style.display = 'block';document.body.style.overflow = 'hidden';document.getElementById('pack-modal-overlay').scrollTop = 0;}
+    function closePack() {document.getElementById('pack-modal-overlay').style.display = 'none';document.body.style.overflow = '';}
+    function closePackOut(e) {if(e.target.id === 'pack-modal-overlay') closePack();}
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') { closePack(); closeLegal(); } });
+
+    const LEGAL = {
+      aviso: {title: 'Aviso Legal',html: `<div class="legal-section"><h3>1. Datos identificativos del titular</h3><div class="legal-highlight"><p><strong>Denominación social:</strong> Aetheria Consulting</p><p><strong>Domicilio:</strong> Majadahonda, Madrid, España</p><p><strong>Email:</strong> <a href="mailto:comercialaetheria@aetheria.es">comercialaetheria@aetheria.es</a></p><p><strong>Teléfono:</strong> 643 199 580</p><p><strong>Sitio web:</strong> agenciaaetheria.es</p></div></div><div class="legal-divider"></div><div class="legal-section"><h3>2. Objeto y ámbito de aplicación</h3><p>El presente Aviso Legal regula el acceso y uso del sitio web <strong>agenciaaetheria.es</strong>, del que es titular Aetheria Consulting.</p><p>El acceso y uso de este Sitio Web atribuye la condición de usuario e implica la aceptación plena de todas las disposiciones incluidas en este Aviso Legal.</p></div><div class="legal-divider"></div><div class="legal-section"><h3>3. Propiedad intelectual e industrial</h3><p>Todos los contenidos del Sitio Web —textos, imágenes, logotipos, diseños, código fuente y cualquier otro elemento— son propiedad de Aetheria Consulting o de terceros que han autorizado su uso, protegidos por la normativa española e internacional sobre propiedad intelectual.</p><p>Queda expresamente prohibida su reproducción, distribución o transformación sin autorización expresa y por escrito de Aetheria Consulting.</p></div><div class="legal-divider"></div><div class="legal-section"><h3>4. Condiciones de uso</h3><p>Queda prohibido utilizar el Sitio Web para:</p><ul><li>Fines ilícitos, fraudulentos o que lesionen derechos de terceros.</li><li>Difundir contenidos racistas, xenófobos o que atenten contra los derechos humanos.</li><li>Introducir virus, troyanos o programas que puedan dañar los sistemas.</li><li>Reproducir o explotar los contenidos con fines comerciales sin autorización.</li></ul></div><div class="legal-divider"></div><div class="legal-section"><h3>5. Limitación de responsabilidad</h3><p>Aetheria Consulting no se hace responsable de los daños derivados del uso del Sitio Web, incluyendo errores en contenidos, falta de disponibilidad o transmisión de software malicioso. Los contenidos tienen carácter meramente informativo.</p></div><div class="legal-divider"></div><div class="legal-section"><h3>6. Legislación aplicable y jurisdicción</h3><p>Este Aviso Legal se rige por la legislación española. Para cualquier controversia, las partes se someten a los Juzgados y Tribunales de <strong>Majadahonda (Madrid)</strong>.</p></div><div class="legal-contact"><h4>📬 Contacto</h4><p>✉️ <a href="mailto:comercialaetheria@aetheria.es">comercialaetheria@aetheria.es</a></p><p>📞 643 199 580 · Majadahonda, Madrid</p></div>`},
+      privacidad: {title: 'Política de Privacidad',html: `<div class="legal-section"><h3>1. Responsable del tratamiento</h3><div class="legal-highlight"><p><strong>Responsable:</strong> Aetheria Consulting</p><p><strong>Domicilio:</strong> Majadahonda, Madrid, España</p><p><strong>Email:</strong> <a href="mailto:comercialaetheria@aetheria.es">comercialaetheria@aetheria.es</a></p><p><strong>Teléfono:</strong> 643 199 580</p></div></div><div class="legal-divider"></div><div class="legal-section"><h3>2. Datos que recogemos</h3><p>Aetheria Consulting recoge datos únicamente cuando el usuario los facilita voluntariamente a través de:</p><ul><li><strong>Formulario de contacto o chat</strong>: nombre, teléfono y/o email.</li><li><strong>WhatsApp Business</strong>: nombre y número al iniciar conversación.</li><li><strong>Email directo</strong> a comercialaetheria@aetheria.es.</li><li><strong>Chatbots de reservas</strong>: nombre, teléfono y datos de la solicitud.</li></ul><p>No recogemos datos mediante cookies de terceros, rastreadores ni píxeles publicitarios.</p></div><div class="legal-divider"></div><div class="legal-section"><h3>3. Finalidad y base legal</h3><ul><li><strong>Gestión de consultas</strong> — base legal: interés legítimo (art. 6.1.f RGPD).</li><li><strong>Prestación de servicios contratados</strong> — base legal: ejecución del contrato (art. 6.1.b RGPD).</li><li><strong>Comunicaciones comerciales</strong> — base legal: consentimiento del interesado (art. 6.1.a RGPD).</li></ul></div><div class="legal-divider"></div><div class="legal-section"><h3>4. Plazo de conservación</h3><ul><li>Clientes activos: durante la relación comercial y hasta <strong>5 años</strong> después.</li><li>Consultas no convertidas: <strong>1 año</strong> desde el último contacto.</li><li>Comunicaciones comerciales: hasta retirar el consentimiento.</li></ul></div><div class="legal-divider"></div><div class="legal-section"><h3>5. Destinatarios</h3><p>No cedemos ni vendemos datos a terceros con fines comerciales. Solo podemos comunicarlos a encargados del tratamiento necesarios para el servicio (siempre bajo contrato) o a Administraciones públicas cuando lo exija la ley.</p><p>No realizamos transferencias internacionales fuera del Espacio Económico Europeo.</p></div><div class="legal-divider"></div><div class="legal-section"><h3>6. Sus derechos</h3><p>Puede ejercer los derechos de <strong>acceso, rectificación, supresión, oposición, limitación y portabilidad</strong> enviando un email a <a href="mailto:comercialaetheria@aetheria.es">comercialaetheria@aetheria.es</a> con copia de su DNI. Respondemos en máximo <strong>30 días</strong>.</p><p>También puede reclamar ante la <strong>Agencia Española de Protección de Datos</strong> en <a href="https://www.aepd.es" target="_blank">www.aepd.es</a>.</p></div><div class="legal-contact"><h4>📬 Contacto para privacidad</h4><p>✉️ <a href="mailto:comercialaetheria@aetheria.es">comercialaetheria@aetheria.es</a></p><p>📞 643 199 580</p></div>`},
+      cookies: {title: 'Política de Cookies',html: `<div class="legal-section"><h3>1. ¿Qué son las cookies?</h3><p>Las cookies son pequeños archivos de texto que un sitio web almacena en el dispositivo del usuario para recordar información sobre la visita y mejorar la experiencia de navegación.</p></div><div class="legal-divider"></div><div class="legal-section"><h3>2. Cookies que utilizamos</h3><p><strong>agenciaaetheria.es</strong> utiliza únicamente <strong>cookies técnicas estrictamente necesarias</strong>, que no requieren consentimiento según el artículo 22.2 de la LSSI-CE.</p><div class="legal-highlight"><p>✅ <strong>Aetheria Consulting NO utiliza:</strong></p><ul style="margin-top:8px"><li>Cookies de analítica de terceros (Google Analytics, Hotjar…)</li><li>Cookies publicitarias o de retargeting (Meta Pixel, Google Ads…)</li><li>Cookies de redes sociales</li><li>Cookies de perfilado o seguimiento del comportamiento</li></ul></div></div><div class="legal-divider"></div><div class="legal-section"><h3>3. Cómo gestionar las cookies</h3><p>Puedes configurar tu navegador para rechazar o eliminar las cookies en cualquier momento. Aquí tienes los enlaces directos a los navegadores más comunes:</p><ul><li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li><li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank">Mozilla Firefox</a></li><li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank">Safari</a></li><li><a href="https://support.microsoft.com/es-es/microsoft-edge/eliminar-las-cookies-en-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank">Microsoft Edge</a></li></ul></div><div class="legal-contact"><h4>📬 Contacto</h4><p>✉️ <a href="mailto:comercialaetheria@aetheria.es">comercialaetheria@aetheria.es</a></p></div>`}
+    };
+
+    function openLegal(page) {const data = LEGAL[page];document.getElementById('legal-title').textContent = data.title;document.getElementById('legal-content').innerHTML = data.html;const overlay = document.getElementById('legal-overlay');overlay.style.display = 'block';document.body.style.overflow = 'hidden';overlay.scrollTop = 0;}
+    function closeLegal() {document.getElementById('legal-overlay').style.display = 'none';document.body.style.overflow = '';}
+    function closeLegalOut(e) {if(e.target.id === 'legal-overlay') closeLegal();}
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') { closeLegal(); } });
+  </script>
+</body>
+</html>
