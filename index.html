@@ -1127,7 +1127,543 @@
   </div>
 </section>
 
-<!-- PRICING -->
+
+  <!-- ================================================================== -->
+<!-- SECCIÓN PACK RAG - WhiteMoon Agencia IA                            -->
+<!-- Versión DARK con ejemplo ficticio "Consultora Globality"          -->
+<!-- Para pegar en la home de whitemoon.es                               -->
+<!-- ================================================================== -->
+
+<section id="pack-rag" class="wm-rag-section">
+  <style>
+    /* Reset scope para no interferir con estilos existentes */
+    .wm-rag-section{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;color:#e2e8f0;line-height:1.65;padding:80px 0;background:#0a0a0a;position:relative;overflow:hidden}
+    .wm-rag-section *{box-sizing:border-box}
+    .wm-rag-section::before{content:'';position:absolute;top:0;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(124,58,237,.15),transparent 70%);pointer-events:none}
+    .wm-rag-section::after{content:'';position:absolute;bottom:0;left:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(212,162,74,.1),transparent 70%);pointer-events:none}
+    .wm-rag-container{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    
+    /* HEADER SECCIÓN */
+    .wm-rag-header{text-align:center;margin-bottom:60px}
+    .wm-rag-badge-new{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;padding:8px 20px;border-radius:30px;font-size:.78rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:18px;box-shadow:0 4px 20px rgba(124,58,237,.5)}
+    .wm-rag-badge-new::before{content:'✨';font-size:1rem}
+    .wm-rag-header h2{font-size:2.6rem;color:#fff;margin:0 0 16px 0;font-weight:800;line-height:1.15;letter-spacing:-1px}
+    .wm-rag-header h2 span{background:linear-gradient(135deg,#a855f7,#d4a24a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .wm-rag-header p.subtitle{font-size:1.15rem;color:#94a3b8;max-width:720px;margin:0 auto;font-weight:400}
+    
+    /* SECTORES */
+    .wm-rag-sectores{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:70px}
+    .wm-sector-card{background:#141420;padding:36px 28px;border-radius:16px;border:1px solid #2a2a3e;transition:all .3s cubic-bezier(.4,0,.2,1);position:relative;overflow:hidden}
+    .wm-sector-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,#7c3aed,#d4a24a);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+    .wm-sector-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(124,58,237,.3);border-color:#7c3aed;background:#1a1a2e}
+    .wm-sector-card:hover::before{transform:scaleX(1)}
+    .wm-sector-icon{width:64px;height:64px;background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 8px 20px rgba(124,58,237,.4)}
+    .wm-sector-icon svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .wm-sector-card h3{font-size:1.3rem;color:#fff;margin:0 0 12px 0;font-weight:700}
+    .wm-sector-card .wm-dolor{font-size:.9rem;color:#64748b;margin-bottom:12px;font-style:italic;line-height:1.5}
+    .wm-sector-card .wm-solucion{font-size:.95rem;color:#cbd5e1;line-height:1.6}
+    .wm-sector-card .wm-features{list-style:none;padding:0;margin:16px 0 0 0}
+    .wm-sector-card .wm-features li{font-size:.88rem;color:#94a3b8;padding:6px 0;padding-left:24px;position:relative}
+    .wm-sector-card .wm-features li::before{content:'✓';position:absolute;left:0;color:#d4a24a;font-weight:700}
+    
+    /* DEMO EN VIVO */
+    .wm-demo-section{background:linear-gradient(135deg,#141420,#1a1a2e);color:#fff;padding:60px 40px;border-radius:20px;margin-bottom:70px;position:relative;overflow:hidden;border:1px solid #2a2a3e}
+    .wm-demo-section::before{content:'';position:absolute;top:-50%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(212,162,74,.12),transparent 70%);pointer-events:none}
+    .wm-demo-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative;z-index:1}
+    .wm-demo-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,162,74,.15);color:#d4a24a;padding:6px 16px;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:18px;border:1px solid rgba(212,162,74,.3)}
+    .wm-demo-badge::before{content:'';width:8px;height:8px;background:#d4a24a;border-radius:50%;animation:pulse-dot 2s infinite}
+    @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+    .wm-demo-section h3{font-size:2rem;margin:0 0 16px 0;font-weight:800;line-height:1.2}
+    .wm-demo-section p{font-size:1.02rem;color:rgba(255,255,255,.85);margin-bottom:24px;line-height:1.6}
+    .wm-demo-note{font-size:.82rem;color:#64748b;margin-top:16px;font-style:italic}
+    .wm-demo-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .wm-demo-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.94rem;transition:all .3s;border:2px solid transparent}
+    .wm-btn-primary{background:#d4a24a;color:#1a1a1a}
+    .wm-btn-primary:hover{background:#e5b35a;transform:translateY(-2px);box-shadow:0 8px 20px rgba(212,162,74,.4)}
+    .wm-btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+    .wm-btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+    
+    /* PREVIEW DEL CHATBOT (simulación visual) */
+    .wm-chatbot-preview{background:#16213e;border-radius:16px;padding:20px;box-shadow:0 20px 50px rgba(0,0,0,.5);position:relative;border:1px solid #2a2a3e}
+    .wm-chatbot-preview::before{content:'🟢 EJEMPLO DEMOSTRATIVO';position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#d4a24a,#e5b35a);color:#1a1a1a;padding:6px 18px;border-radius:20px;font-size:.7rem;font-weight:700;letter-spacing:.5px;box-shadow:0 4px 14px rgba(212,162,74,.4);white-space:nowrap}
+    .wm-chatbot-header{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid #2a2a3e;background:#1a1a2e;border-radius:12px 12px 0 0;margin:-20px -20px 0 -20px}
+    
+    /* LOGO WHITEMOON COMO AVATAR */
+    .wm-chatbot-avatar{width:44px;height:44px;background:#1a1a2e;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(124,58,237,.5);border:2px solid #7c3aed;overflow:hidden}
+    .wm-chatbot-avatar svg{width:100%;height:100%}
+    
+    .wm-chatbot-info h4{color:#fff;font-size:.95rem;margin:0;font-weight:700}
+    .wm-chatbot-info p{color:#64748b;font-size:.75rem;margin:0;display:flex;align-items:center;gap:6px}
+    .wm-chatbot-info p::before{content:'';width:6px;height:6px;background:#10b981;border-radius:50%;animation:pulse-dot 2s infinite}
+    .wm-chatbot-messages{padding:20px 4px;max-height:360px;overflow:hidden}
+    .wm-msg{margin-bottom:14px;max-width:85%;animation:fadeInUp .5s ease both}
+    .wm-msg-bot{background:#2a2a3e;color:#e2e8f0;padding:12px 16px;border-radius:14px 14px 14px 4px;font-size:.88rem;line-height:1.5}
+    .wm-msg-user{background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;padding:12px 16px;border-radius:14px 14px 4px 14px;font-size:.88rem;line-height:1.5;margin-left:auto}
+    .wm-msg-bot ul{margin:8px 0 0 0;padding-left:18px}
+    .wm-msg-bot ul li{margin-bottom:4px;font-size:.82rem}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .wm-chatbot-input{display:flex;align-items:center;gap:10px;padding:14px;background:#1a1a2e;border-radius:0 0 12px 12px;margin:0 -20px -20px -20px;border-top:1px solid #2a2a3e}
+    .wm-chatbot-input-field{flex:1;background:#0a0a0a;color:#64748b;padding:10px 14px;border-radius:8px;font-size:.85rem;border:1px solid #2a2a3e}
+    .wm-chatbot-btn-send{width:36px;height:36px;background:linear-gradient(135deg,#7c3aed,#a855f7);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;box-shadow:0 4px 10px rgba(124,58,237,.4)}
+    
+    /* PACKS DE PRECIOS */
+    .wm-packs-title{text-align:center;margin-bottom:16px}
+    .wm-packs-title h3{font-size:2rem;color:#fff;margin:0 0 10px 0;font-weight:800}
+    .wm-packs-title p{font-size:1rem;color:#94a3b8;margin:0 0 50px 0}
+    .wm-packs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin-bottom:70px}
+    .wm-pack{background:#141420;border:2px solid #2a2a3e;border-radius:18px;padding:36px 28px;position:relative;transition:all .3s;display:flex;flex-direction:column}
+    .wm-pack:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(124,58,237,.2);background:#1a1a2e}
+    .wm-pack.wm-pack-featured{border-color:#7c3aed;border-width:3px;transform:scale(1.03);background:linear-gradient(135deg,#1a1a2e,#14142a)}
+    .wm-pack.wm-pack-featured:hover{transform:scale(1.03) translateY(-6px)}
+    .wm-pack-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;padding:6px 20px;border-radius:20px;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;box-shadow:0 4px 14px rgba(124,58,237,.4);white-space:nowrap}
+    .wm-pack-icon{width:54px;height:54px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:1.8rem}
+    .wm-pack-1 .wm-pack-icon{background:linear-gradient(135deg,#312e81,#1e1b4b)}
+    .wm-pack-2 .wm-pack-icon{background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;box-shadow:0 6px 16px rgba(124,58,237,.4)}
+    .wm-pack-3 .wm-pack-icon{background:linear-gradient(135deg,#78350f,#92400e)}
+    .wm-pack-name{font-size:.82rem;color:#64748b;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+    .wm-pack-title{font-size:1.6rem;color:#fff;font-weight:800;margin:0 0 20px 0}
+    .wm-pack-price{margin-bottom:20px;padding:20px 0;border-top:1px solid #2a2a3e;border-bottom:1px solid #2a2a3e}
+    .wm-pack-price-main{display:flex;align-items:baseline;gap:6px;margin-bottom:8px}
+    .wm-pack-price-amount{font-size:2.4rem;font-weight:800;color:#fff}
+    .wm-pack-price-label{font-size:.88rem;color:#64748b}
+    .wm-pack-price-monthly{font-size:.92rem;color:#94a3b8}
+    .wm-pack-price-monthly strong{color:#d4a24a;font-weight:700}
+    .wm-pack-desc{font-size:.9rem;color:#94a3b8;margin-bottom:16px;min-height:48px}
+    .wm-pack-features{list-style:none;padding:0;margin:0 0 24px 0;flex-grow:1}
+    .wm-pack-features li{padding:8px 0;padding-left:28px;position:relative;font-size:.9rem;color:#cbd5e1;line-height:1.5}
+    .wm-pack-features li::before{content:'✓';position:absolute;left:0;top:8px;color:#d4a24a;font-weight:700;font-size:1.1rem}
+    .wm-pack-features li strong{color:#fff}
+    .wm-pack-cta{display:block;padding:14px 24px;border-radius:10px;text-decoration:none;font-weight:700;font-size:.94rem;text-align:center;transition:all .3s;border:2px solid transparent}
+    .wm-pack-1 .wm-pack-cta{background:#2a2a3e;color:#fff;border-color:#3a3a4e}
+    .wm-pack-1 .wm-pack-cta:hover{background:#3a3a4e}
+    .wm-pack-2 .wm-pack-cta{background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;box-shadow:0 8px 20px rgba(124,58,237,.4)}
+    .wm-pack-2 .wm-pack-cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(124,58,237,.5)}
+    .wm-pack-3 .wm-pack-cta{background:#d4a24a;color:#1a1a1a;border-color:#d4a24a}
+    .wm-pack-3 .wm-pack-cta:hover{background:#e5b35a;border-color:#e5b35a}
+    
+    /* POR QUÉ WHITEMOON */
+    .wm-why-section{background:#141420;padding:50px 40px;border-radius:20px;margin-bottom:60px;border:1px solid #2a2a3e}
+    .wm-why-title{text-align:center;margin-bottom:40px}
+    .wm-why-title h3{font-size:1.8rem;color:#fff;margin:0 0 10px 0;font-weight:800}
+    .wm-why-title p{color:#94a3b8;margin:0}
+    .wm-why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+    .wm-why-item{text-align:center}
+    .wm-why-icon{width:58px;height:58px;background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(168,85,247,.15));border-radius:14px;display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;border:1px solid rgba(124,58,237,.3)}
+    .wm-why-icon svg{width:28px;height:28px;stroke:#a855f7;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .wm-why-item h4{font-size:1.05rem;color:#fff;margin:0 0 8px 0;font-weight:700}
+    .wm-why-item p{font-size:.88rem;color:#94a3b8;margin:0;line-height:1.5}
+    
+    /* FAQ */
+    .wm-faq-section{margin-bottom:60px}
+    .wm-faq-title{text-align:center;margin-bottom:40px}
+    .wm-faq-title h3{font-size:1.8rem;color:#fff;margin:0 0 10px 0;font-weight:800}
+    .wm-faq-title p{color:#94a3b8;margin:0}
+    .wm-faq-list{max-width:800px;margin:0 auto}
+    .wm-faq-item{background:#141420;border:1px solid #2a2a3e;border-radius:12px;margin-bottom:12px;overflow:hidden;transition:all .3s}
+    .wm-faq-item:hover{border-color:#7c3aed}
+    .wm-faq-question{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:1rem;color:#fff;user-select:none;transition:all .3s}
+    .wm-faq-question:hover{background:#1a1a2e}
+    .wm-faq-question .wm-faq-arrow{transition:transform .3s;flex-shrink:0;color:#a855f7;font-size:1.4rem;font-weight:700}
+    .wm-faq-item.wm-faq-open .wm-faq-arrow{transform:rotate(45deg)}
+    .wm-faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease-out;padding:0 24px}
+    .wm-faq-item.wm-faq-open .wm-faq-answer{max-height:500px;padding:0 24px 20px 24px}
+    .wm-faq-answer p{color:#94a3b8;margin:0;font-size:.95rem;line-height:1.7}
+    .wm-faq-answer p strong{color:#fff}
+    
+    /* CTA FINAL */
+    .wm-cta-final{background:linear-gradient(135deg,#7c3aed,#a855f7);color:#fff;padding:60px 40px;border-radius:24px;text-align:center;position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(124,58,237,.4)}
+    .wm-cta-final::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(212,162,74,.2),transparent 70%);pointer-events:none}
+    .wm-cta-final h3{font-size:2.1rem;margin:0 0 16px 0;font-weight:800;position:relative;z-index:1}
+    .wm-cta-final p{font-size:1.1rem;margin-bottom:32px;opacity:.95;max-width:640px;margin-left:auto;margin-right:auto;position:relative;z-index:1}
+    .wm-cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+    .wm-cta-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;border-radius:12px;text-decoration:none;font-weight:700;font-size:1rem;transition:all .3s}
+    .wm-cta-btn-white{background:#fff;color:#7c3aed}
+    .wm-cta-btn-white:hover{background:#d4a24a;color:#1a1a1a;transform:translateY(-2px);box-shadow:0 12px 26px rgba(212,162,74,.4)}
+    .wm-cta-btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+    .wm-cta-btn-ghost:hover{background:rgba(255,255,255,.1);border-color:#fff}
+    
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .wm-rag-section{padding:60px 0}
+      .wm-rag-header h2{font-size:1.9rem}
+      .wm-demo-grid{grid-template-columns:1fr;gap:30px}
+      .wm-demo-section{padding:40px 24px}
+      .wm-demo-section h3{font-size:1.5rem}
+      .wm-pack.wm-pack-featured{transform:none}
+      .wm-pack.wm-pack-featured:hover{transform:translateY(-6px)}
+      .wm-cta-final h3{font-size:1.5rem}
+      .wm-why-section{padding:40px 20px}
+    }
+    @media(max-width:600px){
+      .wm-rag-header h2{font-size:1.6rem}
+      .wm-rag-header p.subtitle{font-size:1rem}
+      .wm-demo-buttons{flex-direction:column}
+      .wm-demo-btn{justify-content:center}
+      .wm-cta-buttons{flex-direction:column}
+      .wm-cta-btn{justify-content:center}
+    }
+  </style>
+
+  <div class="wm-rag-container">
+
+    <!-- HEADER -->
+    <div class="wm-rag-header">
+      <div class="wm-rag-badge-new">NUEVO SERVICIO 2026</div>
+      <h2>Chatbots IA con <span>Conocimiento Propio</span><br>para tu negocio</h2>
+      <p class="subtitle">
+        Asistentes virtuales que responden a tus clientes 24/7 basándose en tus propios 
+        documentos, procedimientos y normativa. Tecnología RAG con IA generativa de última 
+        generación. Especializados en despachos de abogados, consultoras y asesorías.
+      </p>
+    </div>
+
+    <!-- SECTORES -->
+    <div class="wm-rag-sectores">
+      
+      <div class="wm-sector-card">
+        <div class="wm-sector-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/><path d="M12 3v18M4 7.5l8 4.5 8-4.5"/></svg>
+        </div>
+        <h3>Despachos de Abogados</h3>
+        <p class="wm-dolor">"Nuestros paralegales pierden horas respondiendo las mismas dudas"</p>
+        <p class="wm-solucion">Asistente IA entrenado con vuestros procedimientos, plazos legales y casos tipo que responde consultas frecuentes 24/7.</p>
+        <ul class="wm-features">
+          <li>Modelos de contratos</li>
+          <li>Tarifas y plazos</li>
+          <li>Captación de leads nocturnos</li>
+          <li>FAQ automatizado</li>
+        </ul>
+      </div>
+
+      <div class="wm-sector-card">
+        <div class="wm-sector-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <h3>Consultoras</h3>
+        <p class="wm-dolor">"Tenemos muchos informes pero los clientes no los consultan"</p>
+        <p class="wm-solucion">Transforma vuestro conocimiento propietario en un asistente IA que atiende clientes y leads de forma personalizada.</p>
+        <ul class="wm-features">
+          <li>Informes y white papers</li>
+          <li>Metodologías propias</li>
+          <li>Posicionamiento tech-forward</li>
+          <li>Prueba social en web</li>
+        </ul>
+      </div>
+
+      <div class="wm-sector-card">
+        <div class="wm-sector-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Asesorías</h3>
+        <p class="wm-dolor">"Los clientes llaman cada trimestre con las mismas dudas fiscales"</p>
+        <p class="wm-solucion">IA que responde dudas fiscales, laborales y contables basándose en normativa vigente y vuestros procedimientos.</p>
+        <ul class="wm-features">
+          <li>Normativa actualizada</li>
+          <li>Calendario fiscal</li>
+          <li>Modelos tributarios</li>
+          <li>Ahorra horas de gestión</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- DEMO EN VIVO (preview + botones) -->
+    <div class="wm-demo-section">
+      <div class="wm-demo-grid">
+        <div>
+          <div class="wm-demo-badge">EJEMPLO DEMOSTRATIVO</div>
+          <h3>Así funcionará tu Chatbot IA</h3>
+          <p>
+            Este es un <strong>ejemplo demostrativo</strong> de cómo se comportaría 
+            un chatbot IA con RAG para una consultora ficticia llamada 
+            <strong>Consultora Globality</strong>. El asistente responde basándose 
+            en documentación propia: servicios, metodología, casos de estudio, 
+            precios, etc.
+          </p>
+          <p>
+            <strong style="color:#d4a24a">En tu proyecto</strong>, el chatbot se 
+            personaliza con tu marca, tu contenido y tu tono de comunicación. 
+            Cada cliente tiene un asistente único adaptado a su negocio.
+          </p>
+          <p class="wm-demo-note">* Este es un ejemplo simulado con fines demostrativos.</p>
+          <div class="wm-demo-buttons">
+            <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20gustar%C3%ADa%20ver%20una%20demo%20personalizada%20del%20chatbot%20IA%20para%20mi%20negocio" target="_blank" class="wm-demo-btn wm-btn-primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.251.621 4.357 1.7 6.159l-1.799 6.591 6.756-1.771c1.752.96 3.774 1.513 5.946 1.514 6.627 0 12-5.373 12-12 .001-6.628-5.372-12.001-11.999-12.001z"/></svg>
+              Solicitar demo personalizada
+            </a>
+          </div>
+        </div>
+        
+        <!-- PREVIEW VISUAL DEL CHATBOT (ficticio) -->
+        <div class="wm-chatbot-preview">
+          <div class="wm-chatbot-header">
+            <!-- AVATAR: LOGO WHITEMOON (luna doble + estrella) -->
+            <div class="wm-chatbot-avatar">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fondo circular negro -->
+                <circle cx="50" cy="50" r="48" fill="#0a0a1a"/>
+                
+                <!-- Luna morada (inclinada hacia la izquierda) -->
+                <path d="M 32 25 C 22 32, 20 50, 28 62 C 32 67, 38 70, 42 70 C 34 65, 30 55, 31 45 C 32 35, 36 28, 42 25 C 38 23, 34 23, 32 25 Z" 
+                      fill="#7c3aed"/>
+                
+                <!-- Estrella morada pequeña arriba a la derecha de la luna morada -->
+                <path d="M 52 18 L 54 24 L 60 24 L 55 28 L 57 34 L 52 30 L 47 34 L 49 28 L 44 24 L 50 24 Z" 
+                      fill="#a855f7" 
+                      transform="scale(0.7) translate(22, 8)"/>
+                
+                <!-- Luna blanca (inclinada hacia la derecha, superpuesta) -->
+                <path d="M 58 40 C 72 45, 78 58, 72 72 C 66 82, 56 84, 48 82 C 58 78, 65 68, 66 58 C 67 50, 63 43, 58 40 Z" 
+                      fill="#ffffff"/>
+                
+                <!-- Destello dorado decorativo -->
+                <circle cx="78" cy="30" r="2" fill="#d4a24a" opacity="0.9"/>
+                <circle cx="22" cy="75" r="1.5" fill="#d4a24a" opacity="0.7"/>
+              </svg>
+            </div>
+            <div class="wm-chatbot-info">
+              <h4>Asistente Globality</h4>
+              <p>En línea · Responde al instante</p>
+            </div>
+          </div>
+          <div class="wm-chatbot-messages">
+            <div class="wm-msg wm-msg-bot">
+              ¡Hola! 👋 Soy el asistente de <strong>Consultora Globality</strong>. ¿En qué puedo ayudarte?
+            </div>
+            <div class="wm-msg wm-msg-user">
+              ¿Qué servicios ofrecéis?
+            </div>
+            <div class="wm-msg wm-msg-bot">
+              En Globality ofrecemos consultoría especializada en:
+              <ul>
+                <li>Estrategia empresarial</li>
+                <li>Análisis de mercados</li>
+                <li>Transformación digital</li>
+                <li>Formación corporativa...</li>
+              </ul>
+            </div>
+          </div>
+          <div class="wm-chatbot-input">
+            <div class="wm-chatbot-input-field">Escribe tu consulta...</div>
+            <div class="wm-chatbot-btn-send">↑</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACKS -->
+    <div class="wm-packs-title">
+      <h3>Planes y Precios</h3>
+      <p>Tres packs adaptados al tamaño y necesidades de cada negocio</p>
+    </div>
+    
+    <div class="wm-packs-grid">
+      
+      <div class="wm-pack wm-pack-1">
+        <div class="wm-pack-icon">📘</div>
+        <div class="wm-pack-name">Pack Consultor</div>
+        <h4 class="wm-pack-title">Entrada</h4>
+        <div class="wm-pack-price">
+          <div class="wm-pack-price-main">
+            <span class="wm-pack-price-amount">1.800€</span>
+            <span class="wm-pack-price-label">setup · pago único</span>
+          </div>
+          <div class="wm-pack-price-monthly">+ <strong>199€/mes</strong> de mantenimiento</div>
+        </div>
+        <p class="wm-pack-desc">Ideal para profesionales individuales y pequeños despachos que empiezan con IA.</p>
+        <ul class="wm-pack-features">
+          <li>Hasta <strong>50 documentos</strong> indexados</li>
+          <li><strong>500 consultas</strong>/mes incluidas</li>
+          <li>Widget chat en tu web</li>
+          <li>Panel básico de gestión</li>
+          <li>Actualizaciones trimestrales</li>
+          <li>Soporte por email</li>
+        </ul>
+        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Pack%20Consultor%20de%20Chatbot%20IA%20RAG%20(1.800%E2%82%AC%20%2B%20199%E2%82%AC%2Fmes).%20%C2%BFMe%20pod%C3%A9is%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="wm-pack-cta">Más información</a>
+      </div>
+
+      <div class="wm-pack wm-pack-2 wm-pack-featured">
+        <div class="wm-pack-badge">⭐ Más Popular</div>
+        <div class="wm-pack-icon">💼</div>
+        <div class="wm-pack-name">Pack Empresa</div>
+        <h4 class="wm-pack-title">Profesional</h4>
+        <div class="wm-pack-price">
+          <div class="wm-pack-price-main">
+            <span class="wm-pack-price-amount">3.500€</span>
+            <span class="wm-pack-price-label">setup · pago único</span>
+          </div>
+          <div class="wm-pack-price-monthly">+ <strong>349€/mes</strong> de mantenimiento</div>
+        </div>
+        <p class="wm-pack-desc">La opción ideal para despachos medios, consultoras boutique y asesorías establecidas.</p>
+        <ul class="wm-pack-features">
+          <li>Hasta <strong>200 documentos</strong> indexados</li>
+          <li><strong>2.000 consultas</strong>/mes incluidas</li>
+          <li>Widget + URL pública tipo ChatGPT</li>
+          <li>Panel con <strong>analíticas completas</strong></li>
+          <li>Sistema de <strong>captura de leads</strong></li>
+          <li>Actualizaciones mensuales</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Pack%20Empresa%20de%20Chatbot%20IA%20RAG%20(3.500%E2%82%AC%20%2B%20349%E2%82%AC%2Fmes).%20%C2%BFPod%C3%A9is%20agendarme%20una%20videollamada%3F" target="_blank" class="wm-pack-cta">Solicitar información</a>
+      </div>
+
+      <div class="wm-pack wm-pack-3">
+        <div class="wm-pack-icon">💎</div>
+        <div class="wm-pack-name">Pack Premium</div>
+        <h4 class="wm-pack-title">Enterprise</h4>
+        <div class="wm-pack-price">
+          <div class="wm-pack-price-main">
+            <span class="wm-pack-price-amount">6.500€</span>
+            <span class="wm-pack-price-label">setup · pago único</span>
+          </div>
+          <div class="wm-pack-price-monthly">+ <strong>599€/mes</strong> de mantenimiento</div>
+        </div>
+        <p class="wm-pack-desc">Solución completa para firmas grandes que necesitan integración total y escalabilidad.</p>
+        <ul class="wm-pack-features">
+          <li><strong>Documentos ilimitados</strong></li>
+          <li><strong>Consultas ilimitadas</strong></li>
+          <li>Integración <strong>API + CRM</strong></li>
+          <li>Sistema <strong>Stripe suscripciones</strong></li>
+          <li>Panel ejecutivo con KPIs</li>
+          <li>Onboarding personalizado (4h)</li>
+          <li>Multi-idioma (ES, EN, PT)</li>
+          <li>Actualizaciones semanales</li>
+        </ul>
+        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Pack%20Premium%20de%20Chatbot%20IA%20RAG%20(6.500%E2%82%AC%20%2B%20599%E2%82%AC%2Fmes).%20Quiero%20agendar%20una%20consulta." target="_blank" class="wm-pack-cta">Consultar proyecto</a>
+      </div>
+
+    </div>
+
+    <!-- POR QUÉ WHITEMOON -->
+    <div class="wm-why-section">
+      <div class="wm-why-title">
+        <h3>¿Por qué elegir WhiteMoon?</h3>
+        <p>Agencia IA especializada en Majadahonda y Madrid</p>
+      </div>
+      <div class="wm-why-grid">
+        <div class="wm-why-item">
+          <div class="wm-why-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h4>Setup en 5-7 días</h4>
+          <p>Desde la contratación hasta el chatbot funcionando en tu web, en menos de una semana.</p>
+        </div>
+        <div class="wm-why-item">
+          <div class="wm-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h4>30 días de ajustes</h4>
+          <p>Garantizamos ajustes ilimitados durante el primer mes hasta que tu chatbot sea perfecto.</p>
+        </div>
+        <div class="wm-why-item">
+          <div class="wm-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4>Madrid Noroeste</h4>
+          <p>Visitas presenciales en Majadahonda, Pozuelo, Las Rozas y zona. Trato directo.</p>
+        </div>
+        <div class="wm-why-item">
+          <div class="wm-why-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>Soporte humano</h4>
+          <p>Tú hablas con personas, no con tickets. WhatsApp directo para cualquier duda.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="wm-faq-section">
+      <div class="wm-faq-title">
+        <h3>Preguntas frecuentes</h3>
+        <p>Todo lo que necesitas saber antes de contratar</p>
+      </div>
+      <div class="wm-faq-list">
+        
+        <div class="wm-faq-item">
+          <div class="wm-faq-question" onclick="this.parentElement.classList.toggle('wm-faq-open')">
+            <span>¿Cuánto tarda en implementarse?</span>
+            <span class="wm-faq-arrow">+</span>
+          </div>
+          <div class="wm-faq-answer">
+            <p>El plazo habitual es de <strong>5-7 días laborables</strong>. Los primeros días los dedicamos a recopilar vuestros documentos y entender el tono de voz de la empresa. Luego entrenamos la IA, personalizamos el diseño e integramos en vuestra web. El último día hacemos pruebas conjuntas y formación básica.</p>
+          </div>
+        </div>
+
+        <div class="wm-faq-item">
+          <div class="wm-faq-question" onclick="this.parentElement.classList.toggle('wm-faq-open')">
+            <span>¿Necesitamos técnicos internos para mantenerlo?</span>
+            <span class="wm-faq-arrow">+</span>
+          </div>
+          <div class="wm-faq-answer">
+            <p><strong>No, nada técnico por tu parte.</strong> WhiteMoon se encarga de toda la implementación, formación y mantenimiento. Tú solo tienes que pasarnos tus documentos cuando queráis actualizar contenido. Nosotros hacemos el resto.</p>
+          </div>
+        </div>
+
+        <div class="wm-faq-item">
+          <div class="wm-faq-question" onclick="this.parentElement.classList.toggle('wm-faq-open')">
+            <span>¿Qué pasa si nuestra normativa o procedimientos cambian?</span>
+            <span class="wm-faq-arrow">+</span>
+          </div>
+          <div class="wm-faq-answer">
+            <p>Las actualizaciones están incluidas en todos los packs (trimestrales, mensuales o semanales según el plan). Si hay un cambio normativo urgente, tenemos un sistema de actualización express para que el chatbot esté al día en 24-48h.</p>
+          </div>
+        </div>
+
+        <div class="wm-faq-item">
+          <div class="wm-faq-question" onclick="this.parentElement.classList.toggle('wm-faq-open')">
+            <span>¿Funciona bien en móvil?</span>
+            <span class="wm-faq-arrow">+</span>
+          </div>
+          <div class="wm-faq-answer">
+            <p>Sí, <strong>100% responsive</strong>. El widget se adapta perfectamente a móvil, tablet y escritorio. Tus clientes pueden usar el chatbot desde cualquier dispositivo con la misma calidad de experiencia.</p>
+          </div>
+        </div>
+
+        <div class="wm-faq-item">
+          <div class="wm-faq-question" onclick="this.parentElement.classList.toggle('wm-faq-open')">
+            <span>¿Se puede integrar con nuestro CRM o software actual?</span>
+            <span class="wm-faq-arrow">+</span>
+          </div>
+          <div class="wm-faq-answer">
+            <p>En el <strong>Pack Premium</strong> incluimos integración con CRM (HubSpot, Salesforce, Pipedrive, etc.) y herramientas como Stripe para sistemas de suscripciones. En los packs Consultor y Empresa, el sistema funciona de forma independiente pero puede capturar leads y enviarlos a tu email o formulario actual.</p>
+          </div>
+        </div>
+
+        <div class="wm-faq-item">
+          <div class="wm-faq-question" onclick="this.parentElement.classList.toggle('wm-faq-open')">
+            <span>¿Qué diferencia hay con un chatbot normal?</span>
+            <span class="wm-faq-arrow">+</span>
+          </div>
+          <div class="wm-faq-answer">
+            <p>Un chatbot tradicional sigue flujos predefinidos (botón 1, botón 2...) y solo responde lo que has programado. <strong>Nuestros chatbots IA con RAG</strong> entienden lenguaje natural, razonan sobre tus documentos propios y generan respuestas personalizadas. Es como tener un empleado que ha leído toda vuestra documentación y está disponible 24/7.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA FINAL -->
+    <div class="wm-cta-final">
+      <h3>¿Listo para dar el salto a IA?</h3>
+      <p>Hablemos de tu proyecto sin compromiso. Te enseñamos una demo personalizada con el contenido de tu negocio y valoramos juntos si encaja.</p>
+      <div class="wm-cta-buttons">
+        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20servicio%20de%20Chatbot%20IA%20RAG.%20%C2%BFPod%C3%A9is%20contarme%20m%C3%A1s%3F" target="_blank" class="wm-cta-btn wm-cta-btn-white">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.251.621 4.357 1.7 6.159l-1.799 6.591 6.756-1.771c1.752.96 3.774 1.513 5.946 1.514 6.627 0 12-5.373 12-12 .001-6.628-5.372-12.001-11.999-12.001z"/></svg>
+          Contactar por WhatsApp
+        </a>
+        <a href="#pack-rag" class="wm-cta-btn wm-cta-btn-ghost">
+          Ver packs y precios
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FIN SECCIÓN PACK RAG -->
+  <!-- PRICING -->
 <section id="precios" class="sec-alt">
   <div class="wrap">
     <div class="hdr c">
