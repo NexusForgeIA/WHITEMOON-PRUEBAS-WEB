@@ -1023,75 +1023,217 @@
 </section>
 
 <!-- SERVICIOS -->
-<section id="servicios" class="sec-alt" itemscope itemtype="https://schema.org/ItemList">
-  <div class="wrap">
-    <div class="hdr c">
-      <span class="sec-lbl">Servicios</span>
-      <h2 class="sec-h">Soluciones de IA adaptadas a tu operativa real</h2>
-      <p class="sec-sub">Cada proyecto se diseña desde cero para tu sector y proceso. Sin soluciones genéricas de catálogo.</p>
+<section id="servicios" style="padding:100px 24px;background:#07070e;
+  position:relative;overflow:hidden">
+
+  <div style="position:absolute;top:50%;left:50%;
+    transform:translate(-50%,-50%);width:800px;height:400px;
+    background:radial-gradient(ellipse,rgba(139,92,246,.05) 0%,transparent 70%);
+    pointer-events:none"></div>
+
+  <div style="max-width:1100px;margin:0 auto">
+
+    <!-- Header -->
+    <div style="text-align:center;margin-bottom:64px">
+      <div style="display:inline-flex;align-items:center;gap:7px;
+        padding:6px 16px;background:rgba(139,92,246,.1);
+        border:1px solid rgba(139,92,246,.25);border-radius:20px;
+        font-size:.72rem;font-weight:700;color:#a78bfa;
+        letter-spacing:.08em;text-transform:uppercase;
+        margin-bottom:20px">
+        <span style="width:6px;height:6px;border-radius:50%;
+          background:#22c55e;display:inline-block"></span>
+        Proceso
+      </div>
+      <div style="font-family:'Syne',sans-serif;
+        font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;
+        color:#fff;letter-spacing:-.03em;margin-bottom:14px;
+        line-height:1.1">
+        Tu negocio funcionando con IA<br>
+        <span style="background:linear-gradient(135deg,#a78bfa,#e879f9);
+          -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+          background-clip:text">en 4 pasos simples</span>
+      </div>
+      <div style="font-size:.95rem;color:#9090b0;
+        max-width:500px;margin:0 auto;line-height:1.7">
+        Sin tecnicismos. Sin complicaciones.
+        Tu chatbot IA funcionando en menos de 48 horas.
+      </div>
     </div>
-    <div class="svc-grid">
-      <div class="svc-card" onclick="toggleSvc(this)">
-        <div class="svc-label">WhatsApp Business</div>
-        <div class="svc-header"><h3>Automatización WhatsApp</h3><span class="svc-toggle">+</span></div>
-        <p>Chatbots conectados a WhatsApp Business API que atienden consultas, cualifican leads, envían presupuestos y gestionan citas — sin intervención humana.</p>
-        <div class="svc-tags"><span class="stag">WhatsApp API</span><span class="stag">ManyChat</span><span class="stag">Zapier</span></div>
-        <div class="svc-value"><div class="svc-value-dot"></div><span>Tasa apertura media: 98% vs 20% email</span></div>
-        <div class="svc-expand"><div class="svc-expand-inner">
-          <div class="svc-expand-title">Ejemplos de uso por sector</div>
-          <div class="svc-cases">
-            <div class="svc-case"><div class="svc-case-sector">Clínicas y Salud</div><h4>Gestión de citas 24/7</h4><p>El chatbot recoge datos del paciente, consulta disponibilidad y confirma la cita automáticamente por WhatsApp.</p><ul class="svc-case-results"><li>Cero llamadas perdidas fuera de horario</li><li>Recordatorio automático 24h antes</li><li>Reducción de no-shows hasta el 80%</li></ul></div>
-            <div class="svc-case"><div class="svc-case-sector">Comercio y Retail</div><h4>Ventas y atención fuera de horario</h4><p>Responde consultas de precio, stock y pedidos al instante. El cliente compra aunque la tienda esté cerrada.</p></div>
+
+    <!-- 4 pasos -->
+    <div class="pasos-grid" style="display:grid;grid-template-columns:repeat(2,1fr);
+      gap:24px">
+
+      <!-- PASO 1 -->
+      <div class="paso-card" style="background:#0d0d1a;border:1px solid rgba(139,92,246,.15);
+        border-radius:20px;overflow:hidden;
+        transition:transform .3s,border-color .3s;
+        display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:32px">
+          <div style="display:inline-flex;align-items:center;
+            justify-content:center;width:42px;height:42px;
+            border-radius:12px;background:rgba(139,92,246,.15);
+            border:1px solid rgba(139,92,246,.25);
+            font-family:'Syne',sans-serif;font-size:1.1rem;
+            font-weight:800;color:#a78bfa;margin-bottom:16px">1</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1.1rem;
+            font-weight:800;color:#fff;margin-bottom:10px;
+            line-height:1.2">Nos cuentas cómo es tu negocio</div>
+          <div style="font-size:.8rem;color:#9090b0;line-height:1.65;
+            margin-bottom:14px">
+            Una llamada de 30 minutos. Te escuchamos,
+            entendemos tus clientes y detectamos dónde
+            la IA puede generar más impacto.
           </div>
-        </div></div>
+          <div style="font-size:.72rem;color:#22c55e;
+            display:flex;align-items:center;gap:5px">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;
+              stroke:#22c55e;fill:none;stroke-width:2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            30 min · Sin compromiso
+          </div>
+        </div>
+        <div class="paso-img" style="overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80"
+            alt="Llamada de diagnóstico"
+            style="width:100%;height:100%;object-fit:cover;
+            filter:brightness(.7) saturate(.8)">
+        </div>
       </div>
-      <div class="svc-card" onclick="toggleSvc(this)">
-        <div class="svc-label">Inteligencia Artificial</div>
-        <div class="svc-header"><h3>Chatbots con IA Generativa</h3><span class="svc-toggle">+</span></div>
-        <p>Asistentes virtuales con GPT-4 entrenados con el conocimiento de tu negocio. Entienden contexto, detectan intención y escalan al humano cuando hace falta.</p>
-        <div class="svc-tags"><span class="stag">GPT-4</span><span class="stag">NLP</span><span class="stag">Fine-tuning</span></div>
-        <div class="svc-value"><div class="svc-value-dot"></div><span>Media 20h/semana ahorradas por negocio</span></div>
-        <div class="svc-expand"><div class="svc-expand-inner">
-          <div class="svc-expand-title">Ejemplos de uso por sector</div>
-          <div class="svc-cases"><div class="svc-case"><div class="svc-case-sector">Despachos Profesionales</div><h4>Asistente jurídico o fiscal 24/7</h4><p>Responde preguntas frecuentes y filtra consultas urgentes de las rutinarias.</p></div></div>
-        </div></div>
+
+      <!-- PASO 2 -->
+      <div class="paso-card" style="background:#0d0d1a;border:1px solid rgba(139,92,246,.15);
+        border-radius:20px;overflow:hidden;
+        display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:32px">
+          <div style="display:inline-flex;align-items:center;
+            justify-content:center;width:42px;height:42px;
+            border-radius:12px;background:rgba(139,92,246,.15);
+            border:1px solid rgba(139,92,246,.25);
+            font-family:'Syne',sans-serif;font-size:1.1rem;
+            font-weight:800;color:#a78bfa;margin-bottom:16px">2</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1.1rem;
+            font-weight:800;color:#fff;margin-bottom:10px;
+            line-height:1.2">Diseñamos tu agente IA</div>
+          <div style="font-size:.8rem;color:#9090b0;line-height:1.65;
+            margin-bottom:14px">
+            Configuramos el chatbot con el tono, servicios
+            y flujos de tu negocio. Lo entrenamos con
+            tu información real.
+          </div>
+          <div style="font-size:.72rem;color:#22c55e;
+            display:flex;align-items:center;gap:5px">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;
+              stroke:#22c55e;fill:none;stroke-width:2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            24-48h de configuración
+          </div>
+        </div>
+        <div class="paso-img" style="overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=500&q=80"
+            alt="Diseño del agente IA"
+            style="width:100%;height:100%;object-fit:cover;
+            filter:brightness(.7) saturate(.8)">
+        </div>
       </div>
-      <div class="svc-card" onclick="toggleSvc(this)">
-        <div class="svc-label">Captación y Ventas</div>
-        <div class="svc-header"><h3>Embudos de Venta Inteligentes</h3><span class="svc-toggle">+</span></div>
-        <p>Diseñamos rutas de captación automatizadas que cualifican, nutren y convierten leads de forma continua, adaptando el mensaje al comportamiento de cada usuario.</p>
-        <div class="svc-tags"><span class="stag">Lead Scoring</span><span class="stag">CRO</span><span class="stag">A/B Testing</span></div>
-        <div class="svc-value"><div class="svc-value-dot"></div><span>Conversión de leads hasta 3x mayor</span></div>
-        <div class="svc-expand"><div class="svc-expand-inner">
-          <div class="svc-expand-title">Ejemplos de uso</div>
-          <div class="svc-cases"><div class="svc-case"><div class="svc-case-sector">Clínicas Estéticas</div><h4>Captación desde redes sociales</h4><p>El lead llega desde Instagram, el bot recoge su interés, envía contenido personalizado y agenda consulta sin intervención humana.</p></div></div>
-        </div></div>
+
+      <!-- PASO 3 -->
+      <div class="paso-card" style="background:#0d0d1a;border:1px solid rgba(139,92,246,.15);
+        border-radius:20px;overflow:hidden;
+        display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:32px">
+          <div style="display:inline-flex;align-items:center;
+            justify-content:center;width:42px;height:42px;
+            border-radius:12px;background:rgba(139,92,246,.15);
+            border:1px solid rgba(139,92,246,.25);
+            font-family:'Syne',sans-serif;font-size:1.1rem;
+            font-weight:800;color:#a78bfa;margin-bottom:16px">3</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1.1rem;
+            font-weight:800;color:#fff;margin-bottom:10px;
+            line-height:1.2">Lo instalamos en tu web</div>
+          <div style="font-size:.8rem;color:#9090b0;line-height:1.65;
+            margin-bottom:14px">
+            Una línea de código en tu web y listo.
+            Compatible con cualquier plataforma:
+            WordPress, Wix, Shopify o web a medida.
+          </div>
+          <div style="font-size:.72rem;color:#22c55e;
+            display:flex;align-items:center;gap:5px">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;
+              stroke:#22c55e;fill:none;stroke-width:2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Instalación en menos de 1h
+          </div>
+        </div>
+        <div class="paso-img" style="overflow:hidden">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80"
+            alt="Instalación en tu web"
+            style="width:100%;height:100%;object-fit:cover;
+            filter:brightness(.7) saturate(.8)">
+        </div>
       </div>
-      <div class="svc-card" onclick="toggleSvc(this)">
-        <div class="svc-label">Web + IA</div>
-        <div class="svc-header"><h3>Diseño Web con Chatbot IA integrado</h3><span class="svc-toggle">+</span></div>
-        <p>Creamos tu web profesional con chatbot IA integrado desde el primer día. Dominio, hosting, diseño personalizado y asistente inteligente todo en uno.</p>
-        <div class="svc-tags"><span class="stag">WordPress</span><span class="stag">Diseño a medida</span><span class="stag">Chatbot IA</span></div>
-        <div class="svc-value"><div class="svc-value-dot"></div><span>Presencia online + atención automática desde el día 1</span></div>
-        <div class="svc-expand"><div class="svc-expand-inner">
-          <div class="svc-expand-title">Qué incluye</div>
-          <div class="svc-cases"><div class="svc-case"><div class="svc-case-sector">Pack Pyme</div><h4>Web profesional + Chatbot IA</h4><p>Dominio incluido, diseño responsive personalizado, chatbot IA conversacional con sistema de reservas (calendario, horas disponibles, código de reserva), y mantenimiento técnico incluido.</p><ul class="svc-case-results"><li>Operativo en 5-7 días hábiles</li><li>Mantenimiento anual 599€ (hosting + IA + soporte)</li><li>Atención automatizada 24/7 desde el lanzamiento</li></ul></div></div>
-        </div></div>
+
+      <!-- PASO 4 -->
+      <div class="paso-card" style="background:linear-gradient(135deg,
+          rgba(139,92,246,.08) 0%,#0d0d1a 100%);
+        border:1px solid rgba(139,92,246,.3);
+        border-radius:20px;overflow:hidden;
+        display:grid;grid-template-columns:1fr 1fr">
+        <div style="padding:32px">
+          <div style="display:inline-flex;align-items:center;
+            justify-content:center;width:42px;height:42px;
+            border-radius:12px;background:rgba(34,197,94,.15);
+            border:1px solid rgba(34,197,94,.3);
+            font-family:'Syne',sans-serif;font-size:1.1rem;
+            font-weight:800;color:#22c55e;margin-bottom:16px">4</div>
+          <div style="font-family:'Syne',sans-serif;font-size:1.1rem;
+            font-weight:800;color:#fff;margin-bottom:10px;
+            line-height:1.2">Tu negocio trabaja solo 24/7</div>
+          <div style="font-size:.8rem;color:#9090b0;line-height:1.65;
+            margin-bottom:14px">
+            El chatbot atiende, cualifica y agenda
+            mientras tú duermes. Tú solo recibes
+            los leads listos para cerrar.
+          </div>
+          <div style="font-size:.72rem;color:#22c55e;
+            display:flex;align-items:center;gap:5px">
+            <svg viewBox="0 0 24 24" style="width:12px;height:12px;
+              stroke:#22c55e;fill:none;stroke-width:2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Leads 24h · 365 días al año
+          </div>
+        </div>
+        <div class="paso-img" style="overflow:hidden;position:relative">
+          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&q=80"
+            alt="Negocio funcionando 24/7"
+            style="width:100%;height:100%;object-fit:cover;
+            filter:brightness(.7) saturate(.8)">
+          <div style="position:absolute;inset:0;
+            background:linear-gradient(135deg,
+              rgba(34,197,94,.1),rgba(0,0,0,.2))"></div>
+        </div>
       </div>
-      <div class="svc-card" onclick="toggleSvc(this)">
-        <div class="svc-label">Analítica</div>
-        <div class="svc-header"><h3>Business Intelligence y Métricas</h3><span class="svc-toggle">+</span></div>
-        <p>Dashboards personalizados con KPIs en tiempo real: tasa de apertura, coste por lead, conversión por canal y ROI de cada acción. Decisiones basadas en datos.</p>
-        <div class="svc-tags"><span class="stag">Power BI</span><span class="stag">Looker</span><span class="stag">Meta API</span></div>
-        <div class="svc-value"><div class="svc-value-dot"></div><span>Visibilidad 360° de tu negocio en tiempo real</span></div>
-        <div class="svc-expand"><div class="svc-expand-inner">
-          <div class="svc-expand-title">Ejemplos de uso</div>
-          <div class="svc-cases"><div class="svc-case"><div class="svc-case-sector">Dirección y Gerencia</div><h4>Dashboard ejecutivo unificado</h4><p>Ventas, marketing, operaciones y finanzas en un solo panel actualizado en tiempo real.</p></div></div>
-        </div></div>
-      </div>
+
     </div>
+
   </div>
 </section>
+<style>
+  @media(max-width:768px){
+    #servicios .pasos-grid{grid-template-columns:1fr !important}
+    #servicios .paso-card{grid-template-columns:1fr !important}
+    #servicios .paso-img{height:180px}
+  }
+</style>
 
 <!-- SCOUT -->
 <style>
