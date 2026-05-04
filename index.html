@@ -2795,15 +2795,9 @@ body:has(#wmChatbotModal:not(.wmcb-hidden)) #wmChatbotBtn{
       inp.value='';addUserMsg(v);fn(v);
     } else {
       inp.value='';addUserMsg(v);
-      var scoutReply=matchScoutKeywords(v);
-      if(scoutReply){
-        addBotMsg(scoutReply.text).then(function(){
-          if(scoutReply.whatsapp){
-            renderQuick([{label:'💬 Solicitar acceso por WhatsApp',handler:function(){
-              window.open('https://wa.me/'+WM_CHATBOT.whatsapp+'?text='+encodeURIComponent('Hola, me interesa WhiteMoon Scout'),'_blank','noopener');
-            }}]);
-          }
-        });
+      if(matchScoutKeywords(v)){
+        WM_CHATBOT.userData.flow='Scout';
+        flowScout();
       } else {
         addBotMsg('Te respondo mejor con los botones de arriba 👆 Pulsa el icono ↻ para volver al menú.');
       }
@@ -2812,20 +2806,7 @@ body:has(#wmChatbotModal:not(.wmcb-hidden)) #wmChatbotBtn{
 
   function matchScoutKeywords(text){
     var t=text.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
-    var has=function(arr){return arr.some(function(k){return t.indexOf(k)!==-1;});};
-    if(has(['acceso scout','solicitar scout','quiero scout','pedir scout','contratar scout'])){
-      return {text:'Te damos acceso en menos de 24h 🚀\nEscríbenos por WhatsApp y te lo configuramos todo de forma personalizada.',whatsapp:true};
-    }
-    if(has(['white label','marca blanca','reventa','enterprise','revender'])){
-      return {text:'El plan Enterprise incluye white label completo 💪\nTus clientes ven TU marca, no WhiteMoon.\nTambién puedes revender nuestros chatbots y llevarte comisión por cada cierre.\n699€/mes · Sin permanencia.',whatsapp:false};
-    }
-    if(has(['que es scout','para que sirve scout','scout ia','que hace scout','como funciona scout'])){
-      return {text:'Scout es la herramienta que usamos internamente para prospectar y vender servicios de IA. Ahora la ofrecemos a otras agencias 🎯\n\nCon Scout puedes analizar la web de cualquier negocio en segundos y generar una demo personalizada con sus datos reales.\n\n¿Quieres solicitar acceso?',whatsapp:true};
-    }
-    if(has(['scout','crm','herramienta','199','399','699'])){
-      return {text:'¡WhiteMoon Scout es nuestro CRM de ventas IA! 🚀 Analiza webs, genera demos personalizadas y cierra más clientes en menos tiempo.\n\nPlanes:\n🔍 Scout — 199€/mes (1-2 usuarios)\n🚀 Agency — 399€/mes (hasta 5 usuarios) ⭐\n🏆 Enterprise — 699€/mes (white label + reventa)\n\n¿Te interesa? Sin permanencia, acceso en 24h.',whatsapp:true};
-    }
-    return null;
+    return ['scout','crm','herramienta comercial'].some(function(k){return t.indexOf(k)!==-1;});
   }
 
   // ═══ FLUJO INICIAL ═══
@@ -2835,7 +2816,7 @@ body:has(#wmChatbotModal:not(.wmcb-hidden)) #wmChatbotBtn{
         {label:'🎯 Quiero un chatbot',handler:function(){WM_CHATBOT.userData.flow='Chatbot keyword';flowChatbotSector();}},
         {label:'🧠 IA con mis documentos',handler:function(){WM_CHATBOT.userData.flow='RAG';flowRagDocs();}},
         {label:'🌐 Web profesional + chatbot',handler:function(){WM_CHATBOT.userData.flow='Web+Chatbot';flowWebStatus();}},
-        {label:'⚙️ Automatizar negocio (N8N)',handler:function(){WM_CHATBOT.userData.flow='N8N';flowN8nProcesses();}},
+        {label:'🔍 WhiteMoon Scout',handler:function(){WM_CHATBOT.userData.flow='Scout';flowScout();}},
         {label:'💰 Ver todos los precios',handler:function(){WM_CHATBOT.userData.flow='Consulta precios';flowAllPrices();}},
         {label:'📞 Contactar con WhiteMoon',handler:function(){WM_CHATBOT.userData.flow='Contacto directo';flowContact();}}
       ]);
@@ -2945,6 +2926,26 @@ body:has(#wmChatbotModal:not(.wmcb-hidden)) #wmChatbotBtn{
       renderQuick([
         {label:'✅ Sí, quiero el presupuesto',handler:function(){startCapture();}},
         {label:'📞 Contactar con WhiteMoon',handler:function(){startCapture();}}
+      ]);
+    });
+  }
+
+  // ═══ FLUJO SCOUT ═══
+  function flowScout(){
+    var msg='Scout es nuestro CRM de ventas IA — el producto que diferencia a WhiteMoon del resto 🚀\n\n'+
+      'Con Scout cualquier agencia puede:\n'+
+      '🔍 Analizar la web de un prospecto en segundos\n'+
+      '🌐 Generar una web demo con chatbot personalizada\n'+
+      '📋 Preparar pitch, ROI y propuesta automáticamente\n'+
+      '📊 Gestionar pipeline y MRR en tiempo real\n\n'+
+      'Planes desde 199€/mes · Sin permanencia · Acceso en 24h\n\n'+
+      '¿Te interesa solicitar acceso?';
+    addBotMsg(msg).then(function(){
+      renderQuick([
+        {label:'Solicitar acceso a Scout →',handler:function(){
+          window.open('https://wa.me/'+WM_CHATBOT.whatsapp+'?text='+encodeURIComponent('Hola, me interesa WhiteMoon Scout'),'_blank','noopener');
+        }},
+        {label:'📋 Ver otros servicios',handler:function(){startWelcome();}}
       ]);
     });
   }
