@@ -254,6 +254,9 @@
     .nav-logo-txt { font-size: 1.05rem; font-weight: 700; color: var(--text); }
     .nav-logo-txt span { color: var(--p2); }
     .nav-right { display: flex; align-items: center; gap: 6px; }
+    .nav-toggle { display: none; background: transparent; border: 0; color: #fff; cursor: pointer; padding: 8px; border-radius: 8px; align-items: center; justify-content: center; }
+    .nav-toggle:hover { background: rgba(255,255,255,.06); }
+    .nav-mobile-panel { display: none; }
     .nav-link { padding: 8px 14px; border-radius: 8px; font-size: .86rem; color: var(--muted); text-decoration: none; transition: all .15s; font-weight: 500; }
     .nav-link:hover { color: var(--text); background: rgba(124,77,255,0.08); }
     .nav-cta {
@@ -827,6 +830,31 @@
       .stat-col { border-right: none; border-bottom: 1px solid var(--border-soft); padding-bottom: 20px; }
       .stat-col:nth-child(3),.stat-col:nth-child(4) { border-bottom: none; }
       .nav-link { display: none; }
+      .nav-right > a { display: none; }
+      .nav-toggle { display: inline-flex; }
+      .nav-mobile-panel.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(7,7,14,.97);
+        border-top: 1px solid rgba(139,92,246,.2);
+        padding: 8px 16px 14px; gap: 2px; z-index: 199;
+        box-shadow: 0 12px 32px rgba(0,0,0,.5);
+        backdrop-filter: blur(8px);
+      }
+      .nav-mobile-panel a {
+        color: #fff; padding: 14px 12px; text-decoration: none;
+        font-weight: 600; font-size: .92rem;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+        display: flex; align-items: center; gap: 10px;
+      }
+      .nav-mobile-panel a:last-child { border-bottom: 0; }
+      .nav-mobile-panel a.cta-scout { color: #a78bfa; }
+      .nav-mobile-panel a.cta-rag { color: #22d3ee; }
+      .nav-mobile-panel a.cta-wa {
+        background: linear-gradient(135deg,#7c3aed,#5b21b6);
+        border-radius: 8px; justify-content: center; margin-top: 8px;
+        border: 0;
+      }
     }
     .valores-grid { grid-template-columns: repeat(3,1fr); }
     @media(max-width:960px) { .valores-grid { grid-template-columns: repeat(2,1fr); } }
@@ -921,9 +949,43 @@
         RAG IA
       </a>
       <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON" target="_blank" rel="noopener" class="nav-cta" rel="noopener noreferrer">Contactar</a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobilePanel" onclick="toggleMobileNav(this)">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="nav-mobile-panel" id="navMobilePanel">
+      <a href="javascript:void(0)" onclick="navMobileGo('quienes-somos')">Quiénes somos</a>
+      <a href="javascript:void(0)" onclick="navMobileGo('servicios')">Servicios</a>
+      <a href="javascript:void(0)" onclick="navMobileGo('precios')">Precios</a>
+      <a href="javascript:void(0)" onclick="navMobileGo('metodo')">Método</a>
+      <a href="javascript:void(0)" onclick="navMobileGo('faq')">FAQ</a>
+      <a href="https://whitemoon.es/blog/">Blog</a>
+      <a href="javascript:void(0)" class="cta-scout" onclick="navMobileGo('scout')">🔍 Scout IA</a>
+      <a href="javascript:void(0)" class="cta-rag" onclick="navMobileGo('rag')">💬 RAG IA</a>
+      <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON" target="_blank" rel="noopener" class="cta-wa">Contactar por WhatsApp</a>
     </div>
   </div>
 </nav>
+<script>
+  function toggleMobileNav(btn){
+    var p=document.getElementById('navMobilePanel');if(!p)return;
+    var open=p.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  }
+  function navMobileGo(id){
+    var p=document.getElementById('navMobilePanel');
+    var btn=document.querySelector('.nav-toggle');
+    if(p)p.classList.remove('open');
+    if(btn){btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Abrir menú');}
+    var el=document.getElementById(id);
+    if(el)el.scrollIntoView({behavior:'smooth'});
+  }
+</script>
 
 <!-- HERO -->
 <section class="hero">
