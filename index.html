@@ -898,6 +898,49 @@
       .value-card { flex-direction: column; gap: 10px; }
       .value-num { font-size: 1.5rem; }
     }
+
+    /* ─────────────────────────────────────────────
+       BREAKPOINTS CANÓNICOS DEL REPO
+       Tablet : max-width: 900px
+       Mobile : max-width: 600px
+       Cualquier nuevo grid/columna debe respetar
+       estos breakpoints como mínimo.
+       ───────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      /* Cómo funciona — 2 columnas → 1 columna, iPhone oculto */
+      #servicios .servicios-2col { grid-template-columns: 1fr !important; gap: 32px !important; }
+      #servicios .iphone-wrap { display: none !important; }
+      #servicios .pasos-grid { grid-template-columns: 1fr !important; }
+
+      /* Casos de uso — 3 cards a 2 columnas */
+      .usecase-grid { grid-template-columns: repeat(2,1fr); }
+
+      /* Scout — grids 3 col → 2 col, pasos 4 col → 2x2 */
+      #scout .scout-grid { grid-template-columns: repeat(2,1fr); }
+      #scout .scout-steps { grid-template-columns: repeat(2,1fr); }
+      #scout .scout-stats { flex-wrap: wrap; justify-content: center; gap: 20px; }
+
+      /* Packs Advance / Pyme — 2 columnas → 1 columna */
+      .price-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+    }
+
+    @media (max-width: 600px) {
+      /* Casos de uso — siempre 1 columna en móvil */
+      .usecase-grid { grid-template-columns: 1fr; max-width: 100%; }
+
+      /* Scout — todo a 1 columna */
+      #scout .scout-grid { grid-template-columns: 1fr; }
+      #scout .scout-steps { grid-template-columns: 1fr; }
+      #scout .scout-stats { gap: 16px; }
+      #scout .scout-stats > div[style*="width:1px"] { display: none; }
+
+      /* Packs */
+      .price-grid { max-width: 100%; }
+
+      /* Cómo funciona — paso card sin split text/imagen */
+      #servicios .paso-card { grid-template-columns: 1fr !important; }
+      #servicios .paso-img { height: 180px; }
+    }
   </style>
   <!-- ── PERFORMANCE: PRECONNECT ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
