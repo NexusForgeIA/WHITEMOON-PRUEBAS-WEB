@@ -131,18 +131,43 @@
       "itemListElement": [
         {
           "@type": "Offer",
-          "name": "Pack Advance – Chatbot IA Conversacional",
-          "description": "Chatbot conversacional con IA, escritura libre, cualificación de leads y captación por WhatsApp.",
+          "name": "Spark – Chatbot IA Conversacional",
+          "description": "Chatbot conversacional con IA, escritura libre, cualificación de leads y captación por WhatsApp. 149€/mes sin setup ni permanencia.",
           "price": "149",
           "priceCurrency": "EUR",
           "priceSpecification": {"@type": "RecurringCharge", "billingPeriod": "P1M"}
         },
         {
           "@type": "Offer",
-          "name": "Pack Pyme – Web profesional + Chatbot IA",
-          "description": "Web profesional con dominio, hosting y chatbot IA integrado. Pago único todo incluido.",
-          "price": "1800",
-          "priceCurrency": "EUR"
+          "name": "Core – Web profesional + Chatbot IA",
+          "description": "Web profesional con dominio, hosting y chatbot IA integrado. 1.800€ setup + 199€/mes.",
+          "price": "199",
+          "priceCurrency": "EUR",
+          "priceSpecification": {"@type": "RecurringCharge", "billingPeriod": "P1M"}
+        },
+        {
+          "@type": "Offer",
+          "name": "Scale – Chatbot IA RAG para empresas",
+          "description": "Chatbot IA RAG con tus documentos para despachos medios y consultoras. 3.500€ setup + 349€/mes.",
+          "price": "349",
+          "priceCurrency": "EUR",
+          "priceSpecification": {"@type": "RecurringCharge", "billingPeriod": "P1M"}
+        },
+        {
+          "@type": "Offer",
+          "name": "Elite – Chatbot IA RAG premium",
+          "description": "Solución RAG completa para empresas grandes con integración API y CRM. 6.500€ setup + 599€/mes.",
+          "price": "599",
+          "priceCurrency": "EUR",
+          "priceSpecification": {"@type": "RecurringCharge", "billingPeriod": "P1M"}
+        },
+        {
+          "@type": "Offer",
+          "name": "Orbit – RAG Custom",
+          "description": "Plataforma RAG totalmente personalizada con desarrollo a medida. 8.500€ setup + 599€/mes.",
+          "price": "599",
+          "priceCurrency": "EUR",
+          "priceSpecification": {"@type": "RecurringCharge", "billingPeriod": "P1M"}
         }
       ]
     }
@@ -160,7 +185,7 @@
         "name": "¿Cuánto tiempo tarda la implementación?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "La mayoría de sistemas están operativos en 3-7 días hábiles. El Pack Pyme (web + chatbot) en 5-7 días. Incluye configuración, pruebas y formación de tu equipo."
+          "text": "La mayoría de sistemas están operativos en 3-7 días hábiles. El Core (web + chatbot) en 5-7 días. Incluye configuración, pruebas y formación de tu equipo."
         }
       },
       {
@@ -176,15 +201,15 @@
         "name": "¿Cuál es el precio?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Pack Advance: 299€ setup + 199€/año mantenimiento + 149€/mes desde el 2º mes. Pack Pyme 1.800€ setup + 599€/año mantenimiento. Sin permanencia. Presupuesto sin compromiso."
+          "text": "Spark: 149€/mes sin setup. Core: 1.800€ setup + 199€/mes. Scale: 3.500€ setup + 349€/mes. Elite: 6.500€ setup + 599€/mes. Orbit: 8.500€ setup + 599€/mes. Sin permanencia. Presupuesto sin compromiso."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Qué incluye el Pack Pyme?",
+        "name": "¿Qué incluye el Core?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Setup 1.800€: web profesional, dominio incluido, chatbot IA con sistema de reservas integrado, responsive y SEO básico. Mantenimiento 599€/año fraccionado: 299,50€ al activar + 299,50€ a los 6 meses."
+          "text": "Setup 1.800€: web profesional, dominio incluido, chatbot IA con sistema de reservas integrado, responsive y SEO básico. Cuota 199€/mes que incluye mantenimiento, actualizaciones y soporte. Sin permanencia."
         }
       },
       {
@@ -240,7 +265,7 @@
         "name": "¿Se puede integrar con nuestro CRM o software actual?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "En el Pack Premium incluimos integración con CRM (HubSpot, Salesforce, Pipedrive, etc.) y herramientas como Stripe para sistemas de suscripciones. En los packs Consultor y Empresa, el sistema funciona de forma independiente pero puede capturar leads y enviarlos a tu email o formulario actual."
+          "text": "En Elite incluimos integración con CRM (HubSpot, Salesforce, Pipedrive, etc.) y herramientas como Stripe para sistemas de suscripciones. En los packs Core y Scale, el sistema funciona de forma independiente pero puede capturar leads y enviarlos a tu email o formulario actual."
         }
       },
       {
@@ -298,7 +323,7 @@
       --muted2: #5a5a70;
       --max: 1140px;
       --r: 14px;
-      /* Pack Pyme gold accent */
+      /* Core gold accent */
       --gold: #f5c842;
       --gold-dark: #d4a81a;
     }
@@ -573,7 +598,7 @@
       background: #121220;
       box-shadow: 0 0 0 4px rgba(124,77,255,.08);
     }
-    /* Pack Pyme special gold style */
+    /* Core special gold style */
     .price-card.pyme {
       border-color: var(--gold); border-width: 2px;
       background: #13110a;
@@ -1041,7 +1066,7 @@
       #scout .scout-steps { grid-template-columns: repeat(2,1fr); }
       #scout .scout-stats { flex-wrap: wrap; justify-content: center; gap: 20px; }
 
-      /* Packs Advance / Pyme — 2 columnas → 1 columna */
+      /* Packs Spark / Core — 2 columnas → 1 columna */
       .price-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
     }
 
@@ -1640,7 +1665,7 @@
       
       <div class="wm-pack wm-pack-1">
         <div class="wm-pack-icon">📘</div>
-        <div class="wm-pack-name">Pack Consultor</div>
+        <div class="wm-pack-name">Core</div>
         <h4 class="wm-pack-title">Entrada</h4>
         <div class="wm-pack-price">
           <div class="wm-pack-price-main">
@@ -1658,13 +1683,13 @@
           <li>Actualizaciones trimestrales</li>
           <li>Soporte por email</li>
         </ul>
-        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Pack%20Consultor%20de%20Chatbot%20IA%20RAG%20(1.800%E2%82%AC%20%2B%20199%E2%82%AC%2Fmes).%20%C2%BFMe%20pod%C3%A9is%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="wm-pack-cta">Más información</a>
+        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Core%20de%20Chatbot%20IA%20RAG%20(1.800%E2%82%AC%20%2B%20199%E2%82%AC%2Fmes).%20%C2%BFMe%20pod%C3%A9is%20dar%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" class="wm-pack-cta">Más información</a>
       </div>
 
       <div class="wm-pack wm-pack-2 wm-pack-featured">
         <div class="wm-pack-badge">⭐ Más Popular</div>
         <div class="wm-pack-icon">💼</div>
-        <div class="wm-pack-name">Pack Empresa</div>
+        <div class="wm-pack-name">Scale</div>
         <h4 class="wm-pack-title">Profesional</h4>
         <div class="wm-pack-price">
           <div class="wm-pack-price-main">
@@ -1683,12 +1708,12 @@
           <li>Actualizaciones mensuales</li>
           <li>Soporte prioritario</li>
         </ul>
-        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Pack%20Empresa%20de%20Chatbot%20IA%20RAG%20(3.500%E2%82%AC%20%2B%20349%E2%82%AC%2Fmes).%20%C2%BFPod%C3%A9is%20agendarme%20una%20videollamada%3F" target="_blank" class="wm-pack-cta">Solicitar información</a>
+        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Scale%20de%20Chatbot%20IA%20RAG%20(3.500%E2%82%AC%20%2B%20349%E2%82%AC%2Fmes).%20%C2%BFPod%C3%A9is%20agendarme%20una%20videollamada%3F" target="_blank" class="wm-pack-cta">Solicitar información</a>
       </div>
 
       <div class="wm-pack wm-pack-3">
         <div class="wm-pack-icon">💎</div>
-        <div class="wm-pack-name">Pack Premium</div>
+        <div class="wm-pack-name">Elite</div>
         <h4 class="wm-pack-title">Para empresas grandes</h4>
         <div class="wm-pack-price">
           <div class="wm-pack-price-main">
@@ -1708,7 +1733,7 @@
           <li>Multi-idioma (ES, EN, PT)</li>
           <li>Actualizaciones semanales</li>
         </ul>
-        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Pack%20Premium%20de%20Chatbot%20IA%20RAG%20(6.500%E2%82%AC%20%2B%20599%E2%82%AC%2Fmes).%20Quiero%20agendar%20una%20consulta." target="_blank" class="wm-pack-cta">Consultar proyecto</a>
+        <a href="https://wa.me/34643199580?text=Hola%20WHITEMOON%2C%20me%20interesa%20el%20Elite%20de%20Chatbot%20IA%20RAG%20(6.500%E2%82%AC%20%2B%20599%E2%82%AC%2Fmes).%20Quiero%20agendar%20una%20consulta." target="_blank" class="wm-pack-cta">Consultar proyecto</a>
       </div>
 
     </div>
@@ -1805,7 +1830,7 @@
             <span class="wm-faq-arrow">+</span>
           </div>
           <div class="wm-faq-answer">
-            <p>En el <strong>Pack Premium</strong> incluimos integración con CRM (HubSpot, Salesforce, Pipedrive, etc.) y herramientas como Stripe para sistemas de suscripciones. En los packs Consultor y Empresa, el sistema funciona de forma independiente pero puede capturar leads y enviarlos a tu email o formulario actual.</p>
+            <p>En <strong>Elite</strong> incluimos integración con CRM (HubSpot, Salesforce, Pipedrive, etc.) y herramientas como Stripe para sistemas de suscripciones. En los packs Core y Scale, el sistema funciona de forma independiente pero puede capturar leads y enviarlos a tu email o formulario actual.</p>
           </div>
         </div>
 
@@ -1853,7 +1878,7 @@
 
     <div class="precios-grid-2">
 
-      <!-- PACK ADVANCE -->
+      <!-- SPARK -->
       <div style="background:var(--card, #0d0d1a);
         border:1px solid rgba(139,92,246,.3);
         border-radius:20px;overflow:hidden;
@@ -1862,7 +1887,7 @@
 
         <div style="height:220px;overflow:hidden;position:relative">
           <img loading="lazy" decoding="async" width="800" height="600" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80"
-            alt="Pack Advance — chatbot IA conversacional para empresas"
+            alt="Spark — chatbot IA conversacional para empresas"
             style="width:100%;height:100%;object-fit:cover;
             transition:transform .4s">
           <div style="position:absolute;inset:0;
@@ -1881,7 +1906,7 @@
             color:#8b5cf6;margin-bottom:8px">PARA CRECER</div>
           <div style="font-family:'Syne',sans-serif;
             font-size:1.4rem;font-weight:800;
-            color:#fff;margin-bottom:6px">Pack Advance</div>
+            color:#fff;margin-bottom:6px">Spark</div>
           <div style="font-size:.82rem;color:#9090b0;
             margin-bottom:20px;line-height:1.5">
             Chatbot conversacional completo con IA.
@@ -1892,7 +1917,7 @@
             149€<span style="font-size:1rem;color:#9090b0;
             font-weight:400">/mes</span></div>
           <div style="font-size:.72rem;color:#9090b0;
-            margin-bottom:20px">+ 299€ setup · Sin permanencia</div>
+            margin-bottom:20px">Sin setup · Sin permanencia</div>
           <div style="display:flex;flex-direction:column;
             gap:9px;margin-bottom:24px">
             <div style="display:flex;align-items:center;gap:9px;
@@ -1920,7 +1945,7 @@
                 <polyline points="20 6 9 17 4 12"/>
               </svg>Activación en 48h · Sin permanencia</div>
           </div>
-          <a href="https://wa.me/34643199580?text=Hola%2C+me+interesa+el+Pack+Advance"
+          <a href="https://wa.me/34643199580?text=Hola%2C+me+interesa+el+Spark"
             target="_blank" rel="noopener"
             style="display:flex;align-items:center;
             justify-content:center;gap:8px;
@@ -1929,12 +1954,12 @@
             border-radius:10px;color:#fff;text-decoration:none;
             font-weight:700;font-size:.84rem;
             transition:all .25s">
-            Solicitar Pack Advance →
+            Solicitar Spark →
           </a>
         </div>
       </div>
 
-      <!-- PACK PYME -->
+      <!-- CORE -->
       <div style="background:var(--card, #0d0d1a);
         border:1px solid rgba(234,179,8,.25);
         border-radius:20px;overflow:hidden;
@@ -1943,7 +1968,7 @@
 
         <div style="height:220px;overflow:hidden;position:relative">
           <img loading="lazy" decoding="async" width="800" height="600" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80"
-            alt="Pack Pyme — web profesional con chatbot IA integrado"
+            alt="Core — web profesional con chatbot IA integrado"
             style="width:100%;height:100%;object-fit:cover">
           <div style="position:absolute;inset:0;
             background:linear-gradient(180deg,
@@ -1961,7 +1986,7 @@
             color:#eab308;margin-bottom:8px">SOLUCIÓN COMPLETA</div>
           <div style="font-family:'Syne',sans-serif;
             font-size:1.4rem;font-weight:800;
-            color:#fff;margin-bottom:6px">Pack Pyme</div>
+            color:#fff;margin-bottom:6px">Core</div>
           <div style="font-size:.82rem;color:#9090b0;
             margin-bottom:20px;line-height:1.5">
             Web profesional + dominio + chatbot IA + reservas.
@@ -1971,7 +1996,7 @@
             margin-bottom:4px;line-height:1">1.800€</div>
           <div style="font-size:.72rem;color:#9090b0;
             margin-bottom:20px">
-            Setup único · Mantenimiento 599€/año</div>
+            Setup único · 199€/mes</div>
           <div style="display:flex;flex-direction:column;
             gap:9px;margin-bottom:24px">
             <div style="display:flex;align-items:center;gap:9px;
@@ -1999,7 +2024,7 @@
                 <polyline points="20 6 9 17 4 12"/>
               </svg>Operativo en 5-7 días · Pago fraccionado</div>
           </div>
-          <a href="https://wa.me/34643199580?text=Hola%2C+me+interesa+el+Pack+Pyme"
+          <a href="https://wa.me/34643199580?text=Hola%2C+me+interesa+el+Core"
             target="_blank" rel="noopener"
             style="display:flex;align-items:center;
             justify-content:center;gap:8px;
@@ -2008,7 +2033,7 @@
             border-radius:10px;color:#fff;text-decoration:none;
             font-weight:700;font-size:.84rem;
             transition:all .25s">
-            Solicitar Pack Pyme →
+            Solicitar Core →
           </a>
         </div>
       </div>
@@ -2964,7 +2989,7 @@
     </div>
     <div class="value-grid">
       <div class="value-card"><div class="value-num">01</div><div class="value-body"><h3>Implementación en 7 días laborables</h3><p>Mientras otros improvisan, nosotros seguimos un proceso probado que garantiza calidad y resultados desde el primer día.</p><ul><li>Reunión de diagnóstico y toma de datos en el día 1</li><li>Chatbot o automatización en producción antes del día 7</li><li>Formación y entrega con soporte incluido</li></ul></div></div>
-      <div class="value-card"><div class="value-num">02</div><div class="value-body"><h3>Precios claros, sin sorpresas</h3><p>Setup inicial, cuota mensual y mantenimiento anual. Sin permanencia ni costes ocultos.</p><ul><li>Pack Advance: 299€ setup + 199€/año + 149€/mes</li><li>Pack Pyme: 1.800€ setup + 599€/año</li><li>Sin costes ocultos ni letras pequeñas</li></ul></div></div>
+      <div class="value-card"><div class="value-num">02</div><div class="value-body"><h3>Precios claros, sin sorpresas</h3><p>Setup inicial y cuota mensual. Sin permanencia ni costes ocultos.</p><ul><li>Spark: 149€/mes (sin setup)</li><li>Core: 1.800€ setup + 199€/mes</li><li>Scale, Elite y Orbit para necesidades mayores</li></ul></div></div>
       <div class="value-card"><div class="value-num">03</div><div class="value-body"><h3>Integración con tus herramientas actuales</h3><p>No te pedimos que cambies lo que ya usas. Conectamos la IA con tu CRM, email, agenda, WhatsApp y cualquier software existente.</p><ul><li>Compatible con HubSpot, Salesforce, Zoho y más</li><li>Conexión con Google Workspace y Microsoft 365</li></ul></div></div>
       <div class="value-card"><div class="value-num">04</div><div class="value-body"><h3>Soporte local y respuesta &lt;5 minutos</h3><p>Equipo basado en Madrid, disponible por WhatsApp. Conocemos el mercado local y respondemos más rápido que cualquier agencia nacional.</p><ul><li>Atención en Majadahonda, Las Rozas, Boadilla y Pozuelo</li><li>Canal directo de soporte por WhatsApp</li><li>Informes mensuales de rendimiento incluidos</li></ul></div></div>
     </div>
@@ -3000,10 +3025,10 @@
       <p class="sec-sub">Todo lo que necesitas saber antes de empezar.</p>
     </div>
     <div class="faq-wrap">
-      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">¿Cuánto tiempo tarda la implementación?<span class="faq-icon">+</span></button><div class="faq-body"><p>La mayoría de sistemas están operativos en 3-7 días hábiles. El Pack Pyme (web + chatbot) en 5-7 días. Incluye configuración, pruebas y formación de tu equipo.</p></div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">¿Cuánto tiempo tarda la implementación?<span class="faq-icon">+</span></button><div class="faq-body"><p>La mayoría de sistemas están operativos en 3-7 días hábiles. El Core (web + chatbot) en 5-7 días. Incluye configuración, pruebas y formación de tu equipo.</p></div></div>
       <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">¿Necesito conocimientos técnicos?<span class="faq-icon">+</span></button><div class="faq-body"><p>Para nada. Nos encargamos de toda la parte técnica. Tú solo nos cuentas tu proceso actual y nosotros lo automatizamos.</p></div></div>
-      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">¿Cuál es el precio?<span class="faq-icon">+</span></button><div class="faq-body"><p>Pack Advance: 299€ setup + 199€/año mantenimiento + 149€/mes desde el 2º mes. Pack Pyme 1.800€ setup + 599€/año mantenimiento. Sin permanencia. Presupuesto sin compromiso.</p></div></div>
-      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">¿Qué incluye el Pack Pyme?<span class="faq-icon">+</span></button><div class="faq-body"><p>Setup 1.800€: web profesional, dominio incluido, chatbot IA con sistema de reservas integrado, responsive y SEO básico. Mantenimiento 599€/año fraccionado: 299,50€ al activar + 299,50€ a los 6 meses.</p></div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">¿Cuál es el precio?<span class="faq-icon">+</span></button><div class="faq-body"><p>Spark: 149€/mes sin setup. Core: 1.800€ setup + 199€/mes. Scale: 3.500€ setup + 349€/mes. Elite: 6.500€ setup + 599€/mes. Orbit: 8.500€ setup + 599€/mes. Sin permanencia. Presupuesto sin compromiso.</p></div></div>
+      <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">¿Qué incluye el Core?<span class="faq-icon">+</span></button><div class="faq-body"><p>Setup 1.800€: web profesional, dominio incluido, chatbot IA con sistema de reservas integrado, responsive y SEO básico. Cuota 199€/mes que incluye mantenimiento, actualizaciones y soporte. Sin permanencia.</p></div></div>
       <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">¿Puedo ver una demo antes de contratar?<span class="faq-icon">+</span></button><div class="faq-body"><p>Sí. Tenemos demos en vivo para distintos sectores. Contáctanos y te enviamos el enlace o agendamos una videollamada de 20 minutos completamente gratuita.</p></div></div>
       <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">¿En qué zonas trabajáis?<span class="faq-icon">+</span></button><div class="faq-body"><p>Presencia local en Majadahonda, Las Rozas, Boadilla del Monte, Pozuelo de Alarcón y Madrid capital. También atendemos clientes de forma 100% remota en toda España.</p></div></div>
     </div>
@@ -3258,8 +3283,8 @@
       <h4>Servicios</h4>
       <ul class="foot-links-list">
         <li><a href="javascript:void(0)" onclick="document.getElementById('servicios').scrollIntoView({behavior:'smooth'})">Chatbot IA para negocios</a></li>
-        <li><button type="button" onclick="openPack('advance')">Pack Advance</button></li>
-        <li><button type="button" onclick="openPack('pyme')">Pack Pyme</button></li>
+        <li><button type="button" onclick="openPack('advance')">Spark</button></li>
+        <li><button type="button" onclick="openPack('pyme')">Core</button></li>
         <li><a href="javascript:void(0)" onclick="document.getElementById('scout').scrollIntoView({behavior:'smooth'})">WhiteMoon Scout</a></li>
         <li><a href="javascript:void(0)" onclick="var el=document.getElementById('rag');if(el)el.scrollIntoView({behavior:'smooth'})">RAG IA Documentos</a></li>
       </ul>
@@ -3368,20 +3393,20 @@ function toggleFaq(btn) {
 // ── PACKS MODAL ──
 const PACKS={
   advance:{
-    ico:'💬',title:'Pack Advance',sub:'Chatbot IA conversacional',isGold:false,
-    price:'149€/mes',period:'Setup 299€ · Mantenimiento 199€/año',note:'Pago inicial: 299€ · Desde 2º mes 149€/mes',
+    ico:'💬',title:'Spark',sub:'Chatbot IA conversacional',isGold:false,
+    price:'149€/mes',period:'Sin setup · Sin permanencia',note:'Cuota mensual desde el primer mes',
     features:['Chatbot IA instalado en tu web o QR','El cliente puede escribir libremente','IA detecta intención y responde en contexto','Cualificación automática de leads','Captación de datos por WhatsApp','Respuestas rápidas personalizadas','Detección de palabras clave por área','Actualización de contenidos incluida'],
-    noInclude:'',wa:'Pack%20Advance%20149%E2%82%AC%2Fmes'
+    noInclude:'',wa:'Hola%20WHITEMOON%2C%20me%20interesa%20Spark%20149%E2%82%AC%2Fmes'
   },
   pyme:{
-    ico:'🏆',title:'Pack Pyme',sub:'Web profesional + Dominio + Chatbot IA',isGold:true,
-    price:'1.800€',period:'Setup único · Todo incluido',note:'Mantenimiento 599€/año · Operativo en 5-7 días',
+    ico:'🏆',title:'Core',sub:'Web profesional + Dominio + Chatbot IA',isGold:true,
+    price:'1.800€ + 199€/mes',period:'Setup único · Cuota mensual',note:'Operativo en 5-7 días · Sin permanencia',
     features:[
       'Diseño web profesional personalizado',
       'Dominio .es o .com (1 año incluido)',
       'Hosting y alojamiento incluido',
       'Chatbot IA conversacional integrado',
-      'Funciones Basic + Advance en el chatbot',
+      'Funciones del chatbot Spark incluidas',
       'Escritura libre del cliente con IA',
       'Cualificación automática de leads',
       'Diseño responsive para móvil y tablet',
@@ -3390,8 +3415,8 @@ const PACKS={
       'Galería de servicios o productos',
       'Mantenimiento técnico 12 meses incluido'
     ],
-    noInclude:'Renovación del dominio y mantenimiento a partir del 2º año desde .',
-    wa:'Hola%20WHITEMOON%2C%20me%20interesa%20el%20Pack%20Pyme%201.800%E2%82%AC'
+    noInclude:'Renovación del dominio a partir del 2º año.',
+    wa:'Hola%20WHITEMOON%2C%20me%20interesa%20Core%201.800%E2%82%AC%20%2B%20199%E2%82%AC%2Fmes'
   }
 };
 
@@ -3473,7 +3498,7 @@ function sendLead(packId){
   const negocio=document.getElementById('lead-negocio-'+packId)?.value.trim()||'';
   const msg=document.getElementById('lead-msg-'+packId)?.value.trim()||'';
   if(!nombre||!tel){alert('Por favor, rellena al menos tu nombre y teléfono.');return;}
-  const packNames={advance:'Pack Advance 149€/mes',pyme:'Pack Pyme 1.800€ (web+chatbot)'};
+  const packNames={advance:'Spark 149€/mes',pyme:'Core 1.800€ + 199€/mes (web+chatbot)'};
   const text=encodeURIComponent(
     '🔥 *Nuevo lead desde la web* 🔥\n\n'+
     '*Pack interesado:* '+(packNames[packId]||packId)+'\n'+
@@ -3796,11 +3821,12 @@ body:has(#wmChatbotModal:not(.wmcb-hidden)) #wmChatbotBtn{
   ];
 
   var PACKAGES = {
-    advance:{name:'Pack Advance',price:'149€/mes + 299€ setup',short:'Chatbot IA conversacional 24/7'},
-    consultor:{name:'Pack Consultor RAG',price:'1.800€ + 199€/mes',short:'IA con tus documentos para autónomo/consultor'},
-    empresa:{name:'Pack Empresa RAG',price:'3.500€ + 349€/mes',short:'IA con tus documentos para despachos/empresas'},
-    premium:{name:'Pack Premium RAG',price:'6.500€ + 599€/mes',short:'IA premium con documentos para empresas grandes'},
-    pyme:{name:'Pack Pyme',price:'1.800€ único + 599€/año',short:'Web profesional + chatbot + dominio + SEO'}
+    advance:{name:'Spark',price:'149€/mes',short:'Chatbot IA conversacional 24/7 sin setup'},
+    consultor:{name:'Core RAG',price:'1.800€ + 199€/mes',short:'IA con tus documentos para autónomo/consultor'},
+    empresa:{name:'Scale RAG',price:'3.500€ + 349€/mes',short:'IA con tus documentos para despachos/empresas'},
+    premium:{name:'Elite RAG',price:'6.500€ + 599€/mes',short:'IA premium con documentos para empresas grandes'},
+    pyme:{name:'Core (Web + IA)',price:'1.800€ + 199€/mes',short:'Web profesional + chatbot + dominio + SEO'},
+    orbit:{name:'Orbit',price:'8.500€ + 599€/mes',short:'RAG totalmente personalizado a medida'}
   };
 
   function $id(id){return document.getElementById(id);}
@@ -4018,13 +4044,14 @@ body:has(#wmChatbotModal:not(.wmcb-hidden)) #wmChatbotBtn{
 
   // ═══ FLUJO PRECIOS ═══
   function flowAllPrices(){
-    addBotMsg('Aquí tenéis nuestros packs principales:\n\n🤖 CHATBOT KEYWORD\n- Pack Advance: 149€/mes (+299€ setup)\n\n🧠 CHATBOTS RAG (con documentos)\n- Pack Consultor: 1.800€ + 199€/mes\n- Pack Empresa: 3.500€ + 349€/mes ⭐\n- Pack Premium: 6.500€ + 599€/mes\n\n🌐 WEB + CHATBOT + SEO\n- Pack Pyme: 1.800€ + 599€/año\n\n¿Cuál os encaja mejor?').then(function(){
+    addBotMsg('Aquí tenéis nuestros packs principales:\n\n🤖 CHATBOT CONVERSACIONAL\n- Spark: 149€/mes (sin setup)\n\n🧠 CHATBOTS RAG (con documentos)\n- Core RAG: 1.800€ + 199€/mes\n- Scale RAG: 3.500€ + 349€/mes ⭐\n- Elite RAG: 6.500€ + 599€/mes\n- Orbit (RAG a medida): 8.500€ + 599€/mes\n\n🌐 WEB + CHATBOT + SEO\n- Core (Web + IA): 1.800€ + 199€/mes\n\n¿Cuál os encaja mejor?').then(function(){
       renderQuick([
-        {label:'Pack Advance',handler:function(){pickPack('advance');}},
-        {label:'Pack Consultor RAG',handler:function(){pickPack('consultor');}},
-        {label:'Pack Empresa RAG ⭐',handler:function(){pickPack('empresa');}},
-        {label:'Pack Premium RAG',handler:function(){pickPack('premium');}},
-        {label:'Pack Pyme',handler:function(){pickPack('pyme');}}
+        {label:'Spark',handler:function(){pickPack('advance');}},
+        {label:'Core RAG',handler:function(){pickPack('consultor');}},
+        {label:'Scale RAG ⭐',handler:function(){pickPack('empresa');}},
+        {label:'Elite RAG',handler:function(){pickPack('premium');}},
+        {label:'Orbit',handler:function(){pickPack('orbit');}},
+        {label:'Core (Web + IA)',handler:function(){pickPack('pyme');}}
       ]);
     });
   }
