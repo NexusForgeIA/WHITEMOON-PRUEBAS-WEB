@@ -61,6 +61,7 @@
       "@type": "Place",
       "name": "Majadahonda, Madrid, España"
     },
+    "founder": {"@id": "https://whitemoon.es/#fundador"},
     "knowsLanguage": ["es", "en"],
     "knowsAbout": [
       {"@type": "Thing", "name": "Inteligencia artificial", "sameAs": "https://www.wikidata.org/wiki/Q11660"},
@@ -386,6 +387,20 @@
     "name": "Sobre WhiteMoon Agencia IA",
     "isPartOf": {"@id": "https://whitemoon.es/#website"},
     "mainEntity": {"@id": "https://whitemoon.es/#negocio"}
+  }
+  </script>
+
+  <!-- ── SCHEMA PERSON · FOUNDER ──
+       TODO: añadir URL de LinkedIn (y otras redes oficiales) al array sameAs cuando esté disponible. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://whitemoon.es/#fundador",
+    "name": "Cristobal Martinez",
+    "jobTitle": "Fundador & CEO",
+    "worksFor": {"@id": "https://whitemoon.es/#negocio"},
+    "sameAs": []
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
