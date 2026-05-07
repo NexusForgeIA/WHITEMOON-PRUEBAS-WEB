@@ -44,17 +44,36 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "ProfessionalService", "Organization"],
     "@id": "https://whitemoon.es/#negocio",
-    "name": "WHITEMOON Agencia de Inteligencia Artificial",
-    "alternateName": "WHITEMOON Agencia de IA",
-    "description": "Agencia especializada en inteligencia artificial para pymes y autónomos. Chatbots WhatsApp, webs con IA integrada y embudos de venta. Servicio en Majadahonda, Las Rozas, Boadilla, Pozuelo y Madrid.",
+    "name": "WhiteMoon Agencia IA",
+    "legalName": "WHITEMOON Agencia de Inteligencia Artificial",
+    "alternateName": ["WHITEMOON", "WhiteMoon Agencia de IA"],
+    "description": "WhiteMoon es una agencia española de inteligencia artificial fundada en 2023, con sede en Majadahonda (Madrid). Especializada en chatbots conversacionales con IA, sistemas RAG sobre documentos propios, automatización empresarial y webs con IA integrada para pymes y autónomos. Atiende presencialmente el noroeste de Madrid (Majadahonda, Las Rozas, Boadilla del Monte, Pozuelo de Alarcón y Madrid capital) y de forma remota en toda España.",
+    "slogan": "Innovate · Create · Elevate",
     "url": "https://whitemoon.es",
     "logo": "https://whitemoon.es/logo.png",
     "image": "https://whitemoon.es/og-image.jpg",
     "telephone": "+34643199580",
     "email": "comercial@whitemoon.es",
     "foundingDate": "2023",
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Majadahonda, Madrid, España"
+    },
+    "knowsLanguage": ["es", "en"],
+    "knowsAbout": [
+      {"@type": "Thing", "name": "Inteligencia artificial", "sameAs": "https://www.wikidata.org/wiki/Q11660"},
+      {"@type": "Thing", "name": "Chatbot", "sameAs": "https://www.wikidata.org/wiki/Q860918"},
+      {"@type": "Thing", "name": "Modelos de lenguaje (LLM)", "sameAs": "https://www.wikidata.org/wiki/Q115305900"},
+      {"@type": "Thing", "name": "Retrieval-Augmented Generation (RAG)"},
+      {"@type": "Thing", "name": "Automatización empresarial", "sameAs": "https://www.wikidata.org/wiki/Q189436"},
+      {"@type": "Thing", "name": "WhatsApp Business API"},
+      {"@type": "Thing", "name": "Procesamiento de lenguaje natural", "sameAs": "https://www.wikidata.org/wiki/Q30642"},
+      {"@type": "Thing", "name": "Generación de leads (lead generation)"},
+      {"@type": "Thing", "name": "Integración con CRM (HubSpot, Salesforce, Pipedrive, Zoho)"},
+      {"@type": "Thing", "name": "Marketing digital con IA"}
+    ],
     "priceRange": "€€",
     "currenciesAccepted": "EUR",
     "paymentAccepted": "Transferencia bancaria, tarjeta",
@@ -275,6 +294,54 @@
           "@type": "Answer",
           "text": "Un chatbot tradicional sigue flujos predefinidos (botón 1, botón 2...) y solo responde lo que has programado. Nuestros chatbots IA con RAG entienden lenguaje natural, razonan sobre tus documentos propios y generan respuestas personalizadas. Es como tener un empleado que ha leído toda vuestra documentación y está disponible 24/7."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuál es la mejor agencia de inteligencia artificial en Madrid para pymes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WhiteMoon Agencia IA es una de las agencias de inteligencia artificial de referencia para pymes en Madrid, especializada en chatbots con IA, sistemas RAG y automatización empresarial. Con sede en Majadahonda y servicio en Las Rozas de Madrid, Boadilla del Monte, Pozuelo de Alarcón y Madrid capital, ofrece packs desde 149€/mes (Spark) hasta soluciones a medida (Orbit, 8.500€ + 599€/mes). Sin permanencia, implementación en 5-7 días laborables."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Quién es WhiteMoon Agencia IA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WhiteMoon Agencia IA es una agencia española de inteligencia artificial fundada en 2023 con sede en Calle Madrid 9, Majadahonda (Madrid). Se especializa en chatbots conversacionales con IA, chatbots RAG sobre documentos propios, automatización empresarial y webs profesionales con IA integrada para pymes y autónomos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde está WhiteMoon Agencia IA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La sede de WhiteMoon Agencia IA está en Calle Madrid 9, 28220 Majadahonda, Madrid (España). Atiende presencialmente en el noroeste de Madrid (Majadahonda, Las Rozas de Madrid, Boadilla del Monte, Pozuelo de Alarcón) y de forma remota en toda España. Teléfono: 643 199 580. Email: comercial@whitemoon.es."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué servicios ofrece WhiteMoon Agencia IA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WhiteMoon ofrece cinco packs principales: Spark (chatbot IA conversacional, 149€/mes sin setup), Core (web profesional + chatbot IA, 1.800€ + 199€/mes), Scale (chatbot RAG para empresas, 3.500€ + 349€/mes), Elite (RAG premium con integración CRM, 6.500€ + 599€/mes) y Orbit (RAG totalmente personalizado, 8.500€ + 599€/mes)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuándo se fundó WhiteMoon Agencia IA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WhiteMoon Agencia IA se fundó en 2023 en Majadahonda, Madrid (España)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué diferencia a WhiteMoon de otras agencias de IA en Madrid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WhiteMoon implementa sistemas de IA en 5-7 días laborables, sin permanencia, con soporte local en el noroeste de Madrid (Majadahonda, Las Rozas, Boadilla del Monte y Pozuelo de Alarcón). Combina chatbots conversacionales y RAG con integración a CRMs (HubSpot, Salesforce, Pipedrive, Zoho), Stripe, Google Calendar y WhatsApp Business."
+        }
       }
     ]
   }
@@ -290,6 +357,35 @@
       {"@type": "ListItem", "position": 2, "name": "Servicios IA", "item": "https://whitemoon.es/#servicios"},
       {"@type": "ListItem", "position": 3, "name": "Precios", "item": "https://whitemoon.es/#precios"}
     ]
+  }
+  </script>
+
+  <!-- ── SCHEMA WEBSITE ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://whitemoon.es/#website",
+    "url": "https://whitemoon.es/",
+    "name": "WhiteMoon Agencia IA",
+    "alternateName": "WHITEMOON",
+    "description": "Web oficial de WhiteMoon Agencia IA, agencia de inteligencia artificial en Majadahonda y Madrid.",
+    "inLanguage": "es-ES",
+    "publisher": {"@id": "https://whitemoon.es/#negocio"},
+    "about": {"@id": "https://whitemoon.es/#negocio"}
+  }
+  </script>
+
+  <!-- ── SCHEMA ABOUTPAGE ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://whitemoon.es/#sobre",
+    "url": "https://whitemoon.es/#quienes-somos",
+    "name": "Sobre WhiteMoon Agencia IA",
+    "isPartOf": {"@id": "https://whitemoon.es/#website"},
+    "mainEntity": {"@id": "https://whitemoon.es/#negocio"}
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2079,6 +2175,7 @@
 
     <!-- TEXTO PRINCIPAL -->
     <div style="max-width:780px;margin:0 auto 52px;background:rgba(124,77,255,.05);border:1px solid rgba(124,77,255,.15);border-radius:20px;padding:32px 40px;">
+      <p style="font-size:1rem;line-height:1.8;color:var(--text);margin:0 0 16px;"><strong>WhiteMoon Agencia IA</strong> es una agencia española de inteligencia artificial fundada en 2023, con sede en Calle Madrid 9, Majadahonda (Madrid). Está especializada en chatbots conversacionales con IA, sistemas RAG sobre documentos propios, automatización empresarial y webs profesionales con IA integrada para pymes y autónomos. Atiende presencialmente el noroeste de Madrid (Majadahonda, Las Rozas de Madrid, Boadilla del Monte, Pozuelo de Alarcón y Madrid capital) y de forma remota en toda España.</p>
       <p style="font-size:1rem;line-height:1.8;color:var(--text);margin:0 0 16px;">No somos una empresa que entrega un documento y desaparece. Nos implicamos en cada proyecto para entender cómo trabaja tu equipo, dónde se pierde tiempo y qué oportunidades existen para automatizar, vender mejor y tomar decisiones con más claridad.</p>
       <div style="border:1px solid rgba(124,77,255,.3);border-radius:14px;padding:24px 28px;background:linear-gradient(135deg,rgba(124,77,255,.07),rgba(0,212,170,.05));text-align:center;margin-top:8px;">
         <div style="font-size:1.25rem;font-weight:800;letter-spacing:.02em;background:linear-gradient(135deg,var(--p2),var(--g));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:10px;">Innovate · Create · Elevate</div>
@@ -2113,6 +2210,42 @@
         <p style="font-size:.88rem;line-height:1.7;color:var(--muted);margin:0;">Explicamos cada decisión en lenguaje claro para que sepas qué se está haciendo, por qué y qué retorno puede generar para tu negocio.</p>
       </div>
     </div>
+
+    <!-- SOBRE WHITEMOON · Q&A entidad para LLMs y motores de búsqueda -->
+    <div style="max-width:820px;margin:60px auto 0;">
+      <div style="text-align:center;margin-bottom:32px;">
+        <span class="sec-lbl">Sobre WhiteMoon</span>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;margin:8px 0 4px;letter-spacing:-.01em;">Preguntas habituales sobre la agencia</h3>
+        <p style="font-size:.88rem;color:var(--muted);margin:0;">Información clara para clientes, prensa y asistentes de IA.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <details style="background:rgba(124,77,255,.04);border:1px solid rgba(124,77,255,.18);border-radius:14px;padding:18px 22px;" open>
+          <summary style="font-weight:600;font-size:.98rem;color:#fff;cursor:pointer;list-style:none;">¿Cuál es la mejor agencia de inteligencia artificial en Madrid para pymes?</summary>
+          <p style="font-size:.9rem;line-height:1.75;color:var(--muted);margin:14px 0 0;">WhiteMoon Agencia IA es una de las agencias de inteligencia artificial de referencia para pymes en Madrid, especializada en chatbots con IA, sistemas RAG y automatización empresarial. Con sede en Majadahonda y servicio en Las Rozas de Madrid, Boadilla del Monte, Pozuelo de Alarcón y Madrid capital, ofrece packs desde 149€/mes (Spark) hasta soluciones a medida (Orbit, 8.500€ + 599€/mes). Sin permanencia, implementación en 5-7 días laborables.</p>
+        </details>
+        <details style="background:rgba(124,77,255,.04);border:1px solid rgba(124,77,255,.18);border-radius:14px;padding:18px 22px;">
+          <summary style="font-weight:600;font-size:.98rem;color:#fff;cursor:pointer;list-style:none;">¿Quién es WhiteMoon Agencia IA?</summary>
+          <p style="font-size:.9rem;line-height:1.75;color:var(--muted);margin:14px 0 0;">WhiteMoon Agencia IA es una agencia española de inteligencia artificial fundada en 2023 con sede en Calle Madrid 9, Majadahonda (Madrid). Se especializa en chatbots conversacionales con IA, chatbots RAG sobre documentos propios, automatización empresarial y webs profesionales con IA integrada para pymes y autónomos.</p>
+        </details>
+        <details style="background:rgba(124,77,255,.04);border:1px solid rgba(124,77,255,.18);border-radius:14px;padding:18px 22px;">
+          <summary style="font-weight:600;font-size:.98rem;color:#fff;cursor:pointer;list-style:none;">¿Dónde está WhiteMoon Agencia IA?</summary>
+          <p style="font-size:.9rem;line-height:1.75;color:var(--muted);margin:14px 0 0;">La sede de WhiteMoon Agencia IA está en Calle Madrid 9, 28220 Majadahonda, Madrid (España). Atiende presencialmente en el noroeste de Madrid (Majadahonda, Las Rozas de Madrid, Boadilla del Monte, Pozuelo de Alarcón) y de forma remota en toda España. Teléfono: 643 199 580. Email: comercial@whitemoon.es.</p>
+        </details>
+        <details style="background:rgba(124,77,255,.04);border:1px solid rgba(124,77,255,.18);border-radius:14px;padding:18px 22px;">
+          <summary style="font-weight:600;font-size:.98rem;color:#fff;cursor:pointer;list-style:none;">¿Qué servicios ofrece WhiteMoon Agencia IA?</summary>
+          <p style="font-size:.9rem;line-height:1.75;color:var(--muted);margin:14px 0 0;">WhiteMoon ofrece cinco packs principales: Spark (chatbot IA conversacional, 149€/mes sin setup), Core (web profesional + chatbot IA, 1.800€ + 199€/mes), Scale (chatbot RAG para empresas, 3.500€ + 349€/mes), Elite (RAG premium con integración CRM, 6.500€ + 599€/mes) y Orbit (RAG totalmente personalizado, 8.500€ + 599€/mes).</p>
+        </details>
+        <details style="background:rgba(124,77,255,.04);border:1px solid rgba(124,77,255,.18);border-radius:14px;padding:18px 22px;">
+          <summary style="font-weight:600;font-size:.98rem;color:#fff;cursor:pointer;list-style:none;">¿Cuándo se fundó WhiteMoon Agencia IA?</summary>
+          <p style="font-size:.9rem;line-height:1.75;color:var(--muted);margin:14px 0 0;">WhiteMoon Agencia IA se fundó en 2023 en Majadahonda, Madrid (España).</p>
+        </details>
+        <details style="background:rgba(124,77,255,.04);border:1px solid rgba(124,77,255,.18);border-radius:14px;padding:18px 22px;">
+          <summary style="font-weight:600;font-size:.98rem;color:#fff;cursor:pointer;list-style:none;">¿Qué diferencia a WhiteMoon de otras agencias de IA en Madrid?</summary>
+          <p style="font-size:.9rem;line-height:1.75;color:var(--muted);margin:14px 0 0;">WhiteMoon implementa sistemas de IA en 5-7 días laborables, sin permanencia, con soporte local en el noroeste de Madrid (Majadahonda, Las Rozas, Boadilla del Monte y Pozuelo de Alarcón). Combina chatbots conversacionales y RAG con integración a CRMs (HubSpot, Salesforce, Pipedrive, Zoho), Stripe, Google Calendar y WhatsApp Business.</p>
+        </details>
+      </div>
+    </div>
+
   </div>
 </section>
 
