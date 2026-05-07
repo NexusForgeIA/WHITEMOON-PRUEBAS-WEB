@@ -414,7 +414,7 @@ def render_landing(s):
   <meta name="geo.placename" content="Majadahonda, Madrid, España">
   <link rel="canonical" href="{canonical}">
   <link rel="alternate" hreflang="es" href="{canonical}">
-  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="icon" type="image/png" href="../logo.png">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="es_ES">
@@ -610,7 +610,7 @@ def render_landing(s):
 <nav class="nav">
   <div class="wrap nav-inner">
     <a href="https://whitemoon.es/" class="nav-logo" aria-label="Volver a WhiteMoon">
-      <img src="/logo.png" alt="WhiteMoon Agencia IA" width="180" height="82" loading="eager">
+      <img src="../logo.png" alt="WhiteMoon Agencia IA" width="180" height="82" loading="eager">
     </a>
     <a href="https://whitemoon.es/" class="nav-back">← Volver a whitemoon.es</a>
     <a href="{wa_link}" class="nav-cta" target="_blank" rel="noopener">WhatsApp</a>
